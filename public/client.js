@@ -48,11 +48,15 @@ function draw() {
   fill('red');
   ellipse(638, 550, 35, 35);
   ellipse(703, 550, 35, 35);
+  fill('blue');
+  if (dist_agua == 999) {
+    textSize(15);
+    text("Puerto Serie no conectado",1000,500);
+  }
 }
 
 function readData (data) {
   dist_agua = data;
-  //dist_agua = 90;
 }
 
 // when new data comes in the websocket, read it:
