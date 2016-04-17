@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background('rgba(0,255,0,0.25)');          // make the screen white
+  background('hsla(210, 50%, 65%, 0.3)');          // make the screen white
   fill(51);
   textSize(15);
   text("Linea Minima " + linea_minima, 140, linea_minima);
@@ -48,7 +48,7 @@ function draw() {
   fill('red');
   ellipse(638, 550, 35, 35);
   ellipse(703, 550, 35, 35);
-  fill('blue');
+  fill('black');
   if (dist_agua == 999) {
     textSize(15);
     text("Puerto Serie no conectado",1000,500);
