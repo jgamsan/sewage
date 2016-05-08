@@ -40,7 +40,7 @@ socketServer.on('connection', openSocket);	// listener for websocket data
 
 function serveFiles(request, response) {
 	var fileName = request.params.name;				// get the file name from the request
-	response.sendFile(fileName);							// send the file
+	response.sendFile(fileName, {"root": __dirname});							// send the file
 }
 
 function openSocket(socket){
