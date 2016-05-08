@@ -2,8 +2,558 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2086935a-2beb-484d-a987-2cd3b67e4a8b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/async/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/async/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/async/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/async/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/async/lib/async.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/async/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/bindings/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/bindings/bindings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/bindings/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/History.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/browser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/debug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/node.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/node_modules/ms/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/node_modules/ms/History.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/node_modules/ms/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/node_modules/ms/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/node_modules/ms/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/node_modules/ms/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/debug/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/.dntrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/appveyor.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/.build.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/asyncworker.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/buffers.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/callback.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/converters.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/errors.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/maybe_types.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/methods.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/new.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/node_misc.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/object_wrappers.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/persistent.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/scopes.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/script.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/string_bytes.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/v8_internals.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/doc/v8_misc.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/include_dirs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_callbacks.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_callbacks_12_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_callbacks_pre_12_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_converters.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_converters_43_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_converters_pre_43_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_implementation_12_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_implementation_pre_12_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_maybe_43_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_maybe_pre_43_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_new.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_object_wrap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_persistent_12_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_persistent_pre_12_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_string_bytes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_typedarray_contents.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/nan_weak.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/tools/1to2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/tools/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/nan/tools/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/dist/browser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/hasSymbols.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/implementation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/.jscs.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/node_modules/foreach/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/node_modules/foreach/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/node_modules/foreach/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/node_modules/foreach/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/node_modules/foreach/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/node_modules/foreach/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/node_modules/foreach/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/node_modules/foreach/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/define-properties/test/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/.jscs.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/implementation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/function-bind/test/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/.jscs.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/isArguments.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/node_modules/object-keys/test/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/polyfill.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/shim.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/test/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/test/shams/core-js.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/test/shams/get-own-property-symbols.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/test/shimmed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/object.assign/test/tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/bool.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/boolean_double.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/boolean_single.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/default_hash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/default_singles.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/divide.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/line_count.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/line_count_options.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/line_count_wrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/nonopt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/reflect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/short.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/string.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/usage-options.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/example/xup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/example/parse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/readme.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/bool.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/dash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/default_bool.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/dotted.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/long.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/num.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/parse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/parse_modified.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/short.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/minimist/test/whitespace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/wordwrap/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/wordwrap/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/wordwrap/example/center.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/wordwrap/example/meat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/wordwrap/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/wordwrap/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/wordwrap/test/break.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/wordwrap/test/idleness.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/node_modules/wordwrap/test/wrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/readme.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/test/_.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/test/_/argv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/test/_/bin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/test/dash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/test/parse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/test/parse_modified.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/test/short.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/test/usage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/optimist/test/whitespace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sf/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sf/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sf/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sf/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sf/sf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sf/test/indentTest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sf/test/stringFormatTest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sf/test/timeSpanTest.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/build/Release/obj.target/serialport/src/serialport.o" afterPath="$PROJECT_DIR$/node_modules/serialport/build/Release/obj.target/serialport/src/serialport.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/build/Release/obj.target/serialport/src/serialport_poller.o" afterPath="$PROJECT_DIR$/node_modules/serialport/build/Release/obj.target/serialport/src/serialport_poller.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/build/Release/obj.target/serialport/src/serialport_unix.o" afterPath="$PROJECT_DIR$/node_modules/serialport/build/Release/obj.target/serialport/src/serialport_unix.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/build/Release/serialport.node" afterPath="$PROJECT_DIR$/node_modules/serialport/build/Release/serialport.node" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/client.js" afterPath="$PROJECT_DIR$/public/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jsonfile/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/jsonfile/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jsonfile/README.md" afterPath="$PROJECT_DIR$/node_modules/jsonfile/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jsonfile/index.js" afterPath="$PROJECT_DIR$/node_modules/jsonfile/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jsonfile/package.json" afterPath="$PROJECT_DIR$/node_modules/jsonfile/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/moment/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/README.md" afterPath="$PROJECT_DIR$/node_modules/moment/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar-ma.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ar-ma.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar-sa.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ar-sa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar-tn.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ar-tn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ar.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/az.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/br.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/bs.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/bs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ca.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/cy.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/cy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/de-at.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/de-at.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/de.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/es.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/eu.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/fa.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/fr-ca.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/fr-ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/fr-ch.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/fr-ch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/fr.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/fy.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/fy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/gl.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/hi.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/hi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/hr.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/kk.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/kk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/km.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ko.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/lb.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/lb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/lo.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/lo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/lt.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/lv.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/me.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/me.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ml.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/mr.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/mr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/nb.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ne.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ne.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/nl.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/nn.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/nn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/pt-br.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/pt-br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/pt.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ro.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/ru.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/si.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/si.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/sl.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/sq.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/sr-cyrl.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/sr-cyrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/sr.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/sv.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/sw.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/sw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/te.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/te.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/th.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/tlh.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/tlh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/vi.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/zh-cn.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/locale/zh-tw.js" afterPath="$PROJECT_DIR$/node_modules/moment/locale/zh-tw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/min/locales.js" afterPath="$PROJECT_DIR$/node_modules/moment/min/locales.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/min/locales.min.js" afterPath="$PROJECT_DIR$/node_modules/moment/min/locales.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/min/moment-with-locales.js" afterPath="$PROJECT_DIR$/node_modules/moment/min/moment-with-locales.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/min/moment-with-locales.min.js" afterPath="$PROJECT_DIR$/node_modules/moment/min/moment-with-locales.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/min/moment.min.js" afterPath="$PROJECT_DIR$/node_modules/moment/min/moment.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/moment.js" afterPath="$PROJECT_DIR$/node_modules/moment/moment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/package.json" afterPath="$PROJECT_DIR$/node_modules/moment/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-anything.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-anything.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-string-and-format.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-string-and-format.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/parsing-flags.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/create/parsing-flags.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/valid.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/create/valid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/constructor.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/constructor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/create.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/create.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/format/format.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/format/format.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/lists.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/lists.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/locales.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/locales.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/prototype.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/prototype.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/add-subtract.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/add-subtract.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/compare.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/compare.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/diff.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/diff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/format.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/format.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/start-end-of.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/start-end-of.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/to-type.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/moment/to-type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/day-of-week.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/units/day-of-week.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/hour.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/units/hour.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/month.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/units/month.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/offset.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/units/offset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/year.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/units/year.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/deprecate.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/deprecate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-ma.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-ma.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-sa.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-sa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-tn.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ar-tn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ar.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/az.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/br.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/bs.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/bs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ca.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/cy.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/cy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/de-at.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/de-at.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/de.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/es.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/eu.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fa.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fr-ca.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/fr-ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fr-ch.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/fr-ch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fr.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fy.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/fy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/gl.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/hi.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/hi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/hr.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/kk.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/kk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/km.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ko.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/lb.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/lb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/lo.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/lo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/lt.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/lv.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/me.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/me.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ml.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/mr.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/mr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/nb.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ne.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ne.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/nl.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/nn.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/nn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/pt-br.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/pt-br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/pt.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ro.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ru.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/si.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/si.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sl.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sq.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sr-cyrl.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/sr-cyrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sr.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sv.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/sw.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/sw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/te.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/te.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/th.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/tlh.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/tlh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/vi.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/zh-cn.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/zh-tw.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/locale/zh-tw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/moment/src/moment.js" afterPath="$PROJECT_DIR$/node_modules/moment/src/moment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/build/Release/.deps/Release/obj.target/serialport/src/serialport.o.d" afterPath="$PROJECT_DIR$/node_modules/serialport/build/Release/.deps/Release/obj.target/serialport/src/serialport.o.d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/build/Release/.deps/Release/obj.target/serialport/src/serialport_poller.o.d" afterPath="$PROJECT_DIR$/node_modules/serialport/build/Release/.deps/Release/obj.target/serialport/src/serialport_poller.o.d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/build/Release/.deps/Release/obj.target/serialport/src/serialport_unix.o.d" afterPath="$PROJECT_DIR$/node_modules/serialport/build/Release/.deps/Release/obj.target/serialport/src/serialport_unix.o.d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/ansi-regex/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/ansi-regex/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/ansi-styles/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/ansi-styles/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/asn1/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/asn1/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/assert-plus/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/assert-plus/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/aws-sign2/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/aws-sign2/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/aws4/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/aws4/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/bl/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/bl/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/boom/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/boom/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/caseless/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/caseless/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/chalk/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/chalk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/combined-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/combined-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/commander/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/commander/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/core-util-is/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/core-util-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/cryptiles/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/cryptiles/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/dashdash/node_modules/assert-plus/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/dashdash/node_modules/assert-plus/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/dashdash/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/dashdash/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/delayed-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/delayed-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/ecc-jsbn/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/ecc-jsbn/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/escape-string-regexp/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/escape-string-regexp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/extend/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/extend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/extsprintf/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/extsprintf/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/forever-agent/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/forever-agent/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/form-data/node_modules/async/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/form-data/node_modules/async/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/form-data/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/form-data/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/generate-function/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/generate-function/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/generate-object-property/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/generate-object-property/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/github/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/github/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/graceful-readlink/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/graceful-readlink/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/har-validator/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/har-validator/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/has-ansi/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/has-ansi/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/hawk/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/hawk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/hoek/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/hoek/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/http-signature/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/http-signature/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/inherits/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/is-my-json-valid/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/is-my-json-valid/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/is-property/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/is-property/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/is-typedarray/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/is-typedarray/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/isarray/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/isarray/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/isstream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/isstream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/jodid25519/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/jodid25519/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/jsbn/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/jsbn/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/json-schema/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/json-schema/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/json-stringify-safe/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/json-stringify-safe/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/jsonpointer/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/jsonpointer/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/jsprim/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/jsprim/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/lru-cache/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/lru-cache/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/mime/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/mime/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp-github/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp-github/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/mkdirp/node_modules/minimist/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/mkdirp/node_modules/minimist/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/mkdirp/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/mkdirp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/nopt/node_modules/abbrev/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/nopt/node_modules/abbrev/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/nopt/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/nopt/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/ansi/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/ansi/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/delegates/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/delegates/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/core-util-is/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/core-util-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/inherits/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/isarray/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/isarray/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/process-nextick-args/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/process-nextick-args/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/string_decoder/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/string_decoder/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/util-deprecate/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/node_modules/util-deprecate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/readable-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/are-we-there-yet/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/has-unicode/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/has-unicode/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.pad/node_modules/lodash.repeat/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.pad/node_modules/lodash.repeat/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.pad/node_modules/lodash.tostring/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.pad/node_modules/lodash.tostring/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.pad/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.pad/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padend/node_modules/lodash.repeat/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padend/node_modules/lodash.repeat/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padend/node_modules/lodash.tostring/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padend/node_modules/lodash.tostring/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padend/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padstart/node_modules/lodash.repeat/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padstart/node_modules/lodash.repeat/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padstart/node_modules/lodash.tostring/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padstart/node_modules/lodash.tostring/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padstart/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/node_modules/lodash.padstart/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/node_modules/gauge/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/npmlog/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/node_modules/deep-extend/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/node_modules/deep-extend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/node_modules/ini/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/node_modules/ini/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/node_modules/minimist/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/node_modules/minimist/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/node_modules/strip-json-comments/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/node_modules/strip-json-comments/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rc/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws-sign2/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws-sign2/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/pseudomap/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/pseudomap/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/yallist/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/yallist/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws4/node_modules/lru-cache/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws4/node_modules/lru-cache/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws4/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/aws4/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/process-nextick-args/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/process-nextick-args/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/util-deprecate/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/util-deprecate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/bl/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/caseless/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/caseless/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/combined-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/combined-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/extend/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/extend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/forever-agent/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/forever-agent/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/form-data/node_modules/async/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/form-data/node_modules/async/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/form-data/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/form-data/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/ansi-styles/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/ansi-styles/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/escape-string-regexp/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/escape-string-regexp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/supports-color/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/supports-color/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/chalk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/commander/node_modules/graceful-readlink/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/commander/node_modules/graceful-readlink/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/commander/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/commander/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-function/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-function/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/node_modules/is-property/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/node_modules/is-property/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/node_modules/pinkie/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/node_modules/pinkie/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/har-validator/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/node_modules/boom/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/node_modules/boom/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/node_modules/hoek/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/node_modules/hoek/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/node_modules/sntp/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/node_modules/sntp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/hawk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/extsprintf/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/extsprintf/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/json-schema/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/json-schema/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/jsprim/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/jsprim/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/node_modules/assert-plus/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/node_modules/assert-plus/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jsbn/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jsbn/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/node_modules/sshpk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/http-signature/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/is-typedarray/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/is-typedarray/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/isstream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/isstream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/json-stringify-safe/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/json-stringify-safe/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/mime-types/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/node-uuid/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/node-uuid/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/oauth-sign/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/oauth-sign/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/qs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/stringstream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/stringstream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/tough-cookie/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/tough-cookie/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/tunnel-agent/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/node_modules/tunnel-agent/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/request/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/inflight/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/inflight/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/inherits/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/minimatch/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/minimatch/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/once/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/once/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/path-is-absolute/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/node_modules/path-is-absolute/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/node_modules/glob/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/rimraf/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/semver/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/semver/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/debug/node_modules/ms/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/debug/node_modules/ms/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/debug/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/debug/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/inherits/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/minimatch/node_modules/brace-expansion/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/minimatch/node_modules/brace-expansion/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/minimatch/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/node_modules/minimatch/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream-ignore/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream/node_modules/graceful-fs/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream/node_modules/graceful-fs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream/node_modules/inherits/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/fstream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/once/node_modules/wrappy/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/once/node_modules/wrappy/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/once/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/once/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/core-util-is/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/core-util-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/inherits/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/isarray/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/isarray/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/process-nextick-args/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/process-nextick-args/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/string_decoder/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/string_decoder/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/util-deprecate/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/node_modules/util-deprecate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/readable-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/uid-number/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/node_modules/uid-number/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar-pack/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/node_modules/block-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/node_modules/block-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/node_modules/fstream/node_modules/graceful-fs/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/node_modules/fstream/node_modules/graceful-fs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/node_modules/fstream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/node_modules/fstream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/node_modules/inherits/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/node_modules/tar/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-pre-gyp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-uuid/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/node-uuid/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/oauth-sign/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/oauth-sign/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/pinkie-promise/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/pinkie-promise/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/pinkie/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/pinkie/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/process-nextick-args/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/process-nextick-args/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/pseudomap/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/pseudomap/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/qs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/readable-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/request/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/request/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sntp/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/sntp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/sshpk/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/sshpk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/string_decoder/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/string_decoder/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/stringstream/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/stringstream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/strip-ansi/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/strip-ansi/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/supports-color/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/supports-color/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/tough-cookie/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/tough-cookie/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/tunnel-agent/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/tunnel-agent/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/tweetnacl/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/tweetnacl/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/util-deprecate/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/util-deprecate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/verror/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/verror/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/xtend/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/xtend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/node_modules/yallist/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/node_modules/yallist/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/serialport/package.json" afterPath="$PROJECT_DIR$/node_modules/serialport/package.json" />
     </list>
     <ignored path="sewage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +587,7 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
+            <state relative-caret-position="615">
               <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -46,11 +596,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/client.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,8 +705,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,17 +791,18 @@
       <workItem from="1460568544490" duration="57000" />
       <workItem from="1460568626609" duration="4094000" />
       <workItem from="1460822681964" duration="1228000" />
+      <workItem from="1461163319461" duration="316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7283000" />
+    <option name="totallyTimeSpent" value="7599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -275,6 +836,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/prueba_json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/prueba_json.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -439,7 +1026,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
+        <state relative-caret-position="615">
           <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -451,6 +1038,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
