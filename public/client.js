@@ -9,7 +9,6 @@
     created 10 June 2015
     by Tom Igoe
 */
-
 var socket = io();		      // socket.io instance. Connects back to the server
 var x, height, dist_agua, altura_fosa;           // readings from the server
 

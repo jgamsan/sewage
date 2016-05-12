@@ -13,10 +13,10 @@ by Tom Igoe
 
 // server initialization:
 var express = require('express');		// include express.js
-	io = require('socket.io'),				// include socket.io
-	app = express(),									// make an instance of express.js
- 	server = app.listen(8080),				// start a server with the express instance
-	socketServer = io(server);	 			// make a socket server using the express server
+io = require('socket.io'),				// include socket.io
+app = express(),									// make an instance of express.js
+server = app.listen(8080),				// start a server with the express instance
+socketServer = io(server);	 			// make a socket server using the express server
 
 // serial port initialization:
 var serialport = require('serialport'),			// include the serialport library
@@ -32,9 +32,12 @@ var serialport = require('serialport'),			// include the serialport library
 var myPort = new SerialPort(portName, portConfig, function(error) {
 	console.log(error);
 });
-
+var moment = require('moment');
+var Datastore = require('nedb')
+    , db = new Datastore({ filename: __dirname + '/db.json', autoload: true });
 //  set up server and socketServer listener functions:
 app.use(express.static('public'));					// serve files from the public folder
+app.use('/scripts', express.static(__dirname + '/node_modules/'));
 app.get('/:name', serveFiles);							// listener for all static file requests
 socketServer.on('connection', openSocket);	// listener for websocket data
 
@@ -64,6 +67,10 @@ function openSocket(socket){
 	// this function runs if there's input from the serialport:
 	myPort.on('data', function(data) {
 		socket.emit('message', data);		// send the data to the client
+		var a = moment().format();
+		var document = { altura: data, hora: a};
+		db.insert(document, function (err, newDoc) {
+		});
 		console.log(data);
 	});
 
