@@ -14,10 +14,10 @@ var x, height, dist_agua, altura_fosa;           // readings from the server
 
 function setup() {
   createCanvas(1400, 800);   // set up the canvas
-  altura_fosa = 300;
+  altura_fosa = 215;
   percent = (800 - 40) / 300;
-  linea_minima = 60 * percent;
-  linea_maxima = 25 * percent;
+  linea_minima = 45 * percent;
+  linea_maxima = 35 * percent;
 }
 
 function draw() {
