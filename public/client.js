@@ -10,25 +10,30 @@
     by Tom Igoe
 */
 var socket = io();		      // socket.io instance. Connects back to the server
-var x, height, dist_agua, altura_fosa;           // readings from the server
-
+var x, height, distAgua, alturaFosa;           // readings from the server
+var electroA, electroB;
 function setup() {
   createCanvas(1400, 800);   // set up the canvas
-  altura_fosa = 215;
+  alturaFosa = 247;
   percent = (800 - 40) / 300;
-  linea_minima = 45 * percent;
-  linea_maxima = 35 * percent;
+  distanciaMinima = 45;
+  distanciaMaxima = 35;
+  alturaMinima = alturaFosa - 45;
+  alturaMaxima = alturaFosa - 35;
+  linea_minima = distanciaMinima * percent + 40;
+  linea_maxima = distanciaMaxima * percent + 40;
 }
 
 function draw() {
   background('hsla(210, 50%, 65%, 0.3)');          // make the screen white
   fill(51);
   textSize(15);
-  text("Linea Minima " + linea_minima, 140, linea_minima);
+  text("Linea Minima " + alturaMinima, 140, linea_minima);
   text("Linea Maxima", 140, linea_maxima);
-  altura = percent * dist_agua + 40;
-  nivel_fosa = ((altura_fosa / 100) - (dist_agua / 100));
-  text("Nivel Fosa " + nfc(nivel_fosa, 2) + "m", 140, altura);
+  altura = percent * distAgua + 40;
+  nivel_fosa = alturaFosa - distAgua;
+  text("Nivel Fosa " + nivel_fosa + "cm", 140, altura);
+  text("Arqueta Toma Muestras", 880, 180);
   fill(255);
   rect(30,40,75,floor(altura));
   height = 300 * percent - altura;
@@ -44,18 +49,33 @@ function draw() {
   ellipse(300, 450, 55, 55);
   ellipse(400, 350, 55, 55);
   rect(900, 200, 55, 55, 20);
-  fill('red');
-  ellipse(638, 550, 35, 35);
-  ellipse(703, 550, 35, 35);
+  if (electroA == "1") {
+    fill('green');
+    ellipse(638, 550, 35, 35);
+  } else {
+    fill('red');
+    ellipse(638, 550, 35, 35);
+  }
+  if (electroB == "1") {
+    fill("green");
+    ellipse(703, 550, 35, 35);
+  } else {
+    fill("red");
+    ellipse(703, 550, 35, 35);
+  }
   fill('black');
-  if (dist_agua == 999) {
+  if (distAgua == 999) {
     textSize(15);
     text("Puerto Serie no conectado",1000,500);
   }
 }
 
 function readData (data) {
-  dist_agua = data;
+  //dist_agua = data.split("/");
+  datos = "39/1/0".split("/");
+  distAgua = parseInt(datos[0]);
+  electroA = datos[1];
+  electroB = datos[2];
 }
 
 // when new data comes in the websocket, read it:
