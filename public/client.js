@@ -29,12 +29,16 @@ function draw() {
   fill(51);
   textSize(15);
   text("Linea Minima " + alturaMinima, 140, linea_minima);
-  text("Linea Maxima", 140, linea_maxima);
+  text("Linea Maxima " + alturaMaxima, 140, linea_maxima);
   altura = percent * distAgua + 40;
   nivel_fosa = alturaFosa - distAgua;
-  text("Nivel Fosa " + nivel_fosa + "cm", 140, altura);
+
   text("Arqueta Toma Muestras", 880, 180);
-  fill(255);
+    text("Valvula de Retorno", 480, 555);
+    text("Valvula de Vertido", 730, 555);
+    textSize(25);
+    text("Nivel Fosa " + nivel_fosa + "cm", 300, 100);
+    fill(255);
   rect(30,40,75,floor(altura));
   height = 300 * percent - altura;
   fill(255,204,0);
@@ -45,24 +49,34 @@ function draw() {
   line(10, linea_maxima, 125, linea_maxima);
   fill('green');
   rect(600, 100, 150, 400, 5, 5, 0, 0);
-  ellipse(200, 550, 55, 55);
+
   ellipse(300, 450, 55, 55);
   ellipse(400, 350, 55, 55);
-  rect(900, 200, 55, 55, 20);
-  if (electroA == "1") {
-    fill('green');
-    ellipse(638, 550, 35, 35);
-  } else {
-    fill('red');
-    ellipse(638, 550, 35, 35);
+  switch(electroA) {
+      case "0":
+          fill('red');
+          ellipse(638, 550, 35, 35);
+          ellipse(200, 550, 55, 55);
+        break;
+      case "1":
+          fill('green');
+          ellipse(638, 550, 35, 35);
+          ellipse(200, 550, 55, 55);
+          break;
   }
-  if (electroB == "1") {
-    fill("green");
-    ellipse(703, 550, 35, 35);
-  } else {
-    fill("red");
-    ellipse(703, 550, 35, 35);
+  switch(electroB) {
+      case "0":
+          fill("red");
+          ellipse(703, 550, 35, 35);
+          rect(900, 200, 55, 55, 20);
+          break;
+      case "1":
+          fill("green");
+          ellipse(703, 550, 35, 35);
+          rect(900, 200, 55, 55, 20);
+          break;
   }
+
   fill('black');
   if (distAgua == 999) {
     textSize(15);
@@ -71,11 +85,18 @@ function draw() {
 }
 
 function readData (data) {
-  //dist_agua = data.split("/");
-  datos = "39/1/0".split("/");
-  distAgua = parseInt(datos[0]);
-  electroA = datos[1];
-  electroB = datos[2];
+
+    distAgua = parseInt(data);
+    if (distAgua <= 35) {
+        electroA = "0";
+        electroB = "1";
+    } else if (distAgua > 35 && distAgua <= 45) {
+        electroA = "1";
+        electroB = "1";
+    } else {
+        electroA = "1";
+        electroB = "0";
+    }
 }
 
 // when new data comes in the websocket, read it:

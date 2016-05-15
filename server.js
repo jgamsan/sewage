@@ -68,7 +68,7 @@ function openSocket(socket){
 	myPort.on('data', function(data) {
 		socket.emit('message', data);		// send the data to the client
 		var a = moment().format();
-		var document = { altura: data, hora: a};
+		var document = { altura: parseInt(data), hora: a};
 		db.insert(document, function (err, newDoc) {
 		});
 		console.log(data);
