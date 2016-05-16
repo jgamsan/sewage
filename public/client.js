@@ -10,12 +10,13 @@
     by Tom Igoe
 */
 var socket = io();		      // socket.io instance. Connects back to the server
-var x, height, distAgua, alturaFosa;           // readings from the server
+var x, height, distAgua, alturaFosa;
+var tempAire;// readings from the server
 var electroA, electroB;
 function setup() {
-  createCanvas(1400, 800);   // set up the canvas
+  createCanvas(windowWidth, windowHeight);   // set up the canvas
   alturaFosa = 247;
-  percent = (800 - 40) / 300;
+  percent = (windowHeight - 40) / 300;
   distanciaMinima = 45;
   distanciaMaxima = 35;
   alturaMinima = alturaFosa - 45;
@@ -37,7 +38,9 @@ function draw() {
     text("Valvula de Retorno", 480, 555);
     text("Valvula de Vertido", 730, 555);
     textSize(25);
-    text("Nivel Fosa " + nivel_fosa + "cm", 300, 100);
+    text("Nivel Fosa: " + nivel_fosa + "cm", 300, windowHeight - 100);
+    text("Temperatura Aire: " + tempAire + "ºC", 300, windowHeight - 50);
+    text(day() + "/" + month() + "/" + year(), 1100, 50);
     fill(255);
   rect(30,40,75,floor(altura));
   height = 300 * percent - altura;
@@ -86,7 +89,11 @@ function draw() {
 
 function readData (data) {
 
-    distAgua = parseInt(data);
+    var datos = data.split("%");
+    distAgua = parseFloat(datos[0]);
+    tempAire = datos[1];
+    //distAgua = parseInt(data);
+
     if (distAgua <= 35) {
         electroA = "0";
         electroB = "1";

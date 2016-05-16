@@ -30,7 +30,7 @@ var serialport = require('serialport'),			// include the serialport library
 
 // open the serial port:
 var myPort = new SerialPort(portName, portConfig, function(error) {
-	console.log(error);
+	//console.log(error);
 });
 var moment = require('moment');
 var Datastore = require('nedb')
@@ -47,14 +47,14 @@ function serveFiles(request, response) {
 }
 
 function openSocket(socket){
-	console.log('new user address: ' + socket.handshake.address);
+	//console.log('new user address: ' + socket.handshake.address);
 	// send something to the web client with the data:
 	if (myPort.isOpen()) {
 		socket.emit('message', '000');
-		console.log('000');
+		//console.log('000');
 	} else {
 		socket.emit('message', '999');
-		console.log('999');
+		//console.log('999');
 	}
 
 	//socket.emit('message', 'Hello, ' + socket.handshake.address);
@@ -68,19 +68,21 @@ function openSocket(socket){
 	myPort.on('data', function(data) {
 		socket.emit('message', data);		// send the data to the client
 		var a = moment().format();
-		var document = { altura: parseInt(data), hora: a};
+		var datos = data.split("%");
+		var altura = parseFloat(datos[0]);
+		var document = { altura: parseInt(altura), hora: a};
 		db.insert(document, function (err, newDoc) {
 		});
-		console.log(data);
+		//console.log(data);
 	});
 
 	// this function runs if port is closed:
 	myPort.on('disconnect', function() {
-		console.log("Port is closed");
+		//console.log("Port is closed");
 	});
 
 	myPort.on('error', function() {
 		socket.emit('message', '999');
-		console.log('999');
+		//console.log('999');
 	});
 }
