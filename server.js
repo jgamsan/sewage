@@ -20,13 +20,13 @@ socketServer = io(server);	 			// make a socket server using the express server
 
 // serial port initialization:
 var serialport = require('serialport'),			// include the serialport library
-	SerialPort  = serialport.SerialPort,			// make a local instance of serial
-	portName = process.argv[2],								// get the port name from the command line
-	portConfig = {
-		baudRate: 9600,
-		// call myPort.on('data') when a newline is received:
-		parser: serialport.parsers.readline('\n')
-	};
+SerialPort  = serialport.SerialPort,			// make a local instance of serial
+portName = process.argv[2],								// get the port name from the command line
+portConfig = {
+	baudRate: 9600,
+	// call myPort.on('data') when a newline is received:
+	parser: serialport.parsers.readline('\n')
+};
 
 // open the serial port:
 var myPort = new SerialPort(portName, portConfig, function(error) {
@@ -38,7 +38,8 @@ var Datastore = require('nedb')
 //  set up server and socketServer listener functions:
 app.use(express.static('public'));					// serve files from the public folder
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
-app.get('/:name', serveFiles);							// listener for all static file requests
+app.get('/:name', serveFiles);
+// listener for all static file requests
 socketServer.on('connection', openSocket);	// listener for websocket data
 
 function serveFiles(request, response) {
