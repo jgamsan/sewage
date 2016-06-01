@@ -23,60 +23,63 @@ function setup() {
   alturaMaxima = alturaFosa - 35;
   linea_minima = distanciaMinima * percent + 40;
   linea_maxima = distanciaMaxima * percent + 40;
+  anchoMedidor = 0.05 * windowWidth;
+  radioValvulas = 0.05 * windowHeight;
+  radioArquetas = 0.07 * windowHeight;
 }
 
 function draw() {
   background('hsla(210, 50%, 65%, 0.3)');          // make the screen white
   fill(51);
-  textSize(15);
-  text("Linea Minima " + alturaMinima, 140, linea_minima);
-  text("Linea Maxima " + alturaMaxima, 140, linea_maxima);
+  textSize(0.03 * windowHeight);
+  text("Linea Minima " + alturaMinima, anchoMedidor + 60, linea_minima);
+  text("Linea Maxima " + alturaMaxima, anchoMedidor + 60, linea_maxima);
   altura = percent * distAgua + 40;
   nivel_fosa = alturaFosa - distAgua;
 
-  text("Arqueta Toma Muestras", 880, 180);
-    text("Valvula de Retorno", 480, 555);
-    text("Valvula de Vertido", 730, 555);
-    textSize(25);
-    text("Nivel Fosa: " + nivel_fosa + "cm", 300, windowHeight - 100);
-    text("Temperatura Aire: " + tempAire + "ºC", 300, windowHeight - 50);
-    text(day() + "/" + month() + "/" + year(), 1100, 50);
-    fill(255);
-  rect(30,40,75,floor(altura));
+  text("Arqueta Toma Muestras", windowWidth * 0.6, windowHeight * 0.22);
+  text("Valvula de Retorno", windowWidth * 0.3, windowHeight * 0.75);
+  text("Valvula de Vertido", windowWidth * 0.51, windowHeight * 0.75);
+  textSize(0.03 * windowHeight);
+  text("Nivel Fosa: " + nivel_fosa + " cm", windowWidth * 0.18, 0.90 * windowHeight);
+  text("Temperatura Aire: " + tempAire + "ºC", windowWidth * 0.18, 0.95 * windowHeight);
+  text(day() + "/" + month() + "/" + year(), 1100, 50);
+  fill(255);
+  rect(30,40,anchoMedidor,floor(altura));
   height = 300 * percent - altura;
   fill(255,204,0);
-  rect(30,floor(altura),75,floor(height));
+  rect(30,floor(altura),anchoMedidor,floor(height));
   noFill();
   strokeWeight(3);
-  line(10, linea_minima, 125, linea_minima);
-  line(10, linea_maxima, 125, linea_maxima);
+  line(20, linea_minima, anchoMedidor + 40, linea_minima);
+  line(20, linea_maxima, anchoMedidor + 40, linea_maxima);
   fill('green');
-  rect(600, 100, 150, 400, 5, 5, 0, 0);
+  rect(windowWidth * 0.42, windowHeight * 0.10, windowWidth * 0.1, windowHeight * 0.59, 5, 5, 0, 0);
 
-  ellipse(300, 450, 55, 55);
-  ellipse(400, 350, 55, 55);
+  ellipse(windowWidth * 0.22, windowHeight * 0.62, radioArquetas, radioArquetas);
+  ellipse(windowWidth * 0.29, windowHeight * 0.50, radioArquetas, radioArquetas);
   switch(electroA) {
       case "0":
           fill('red');
-          ellipse(638, 550, 35, 35);
-          ellipse(200, 550, 55, 55);
+          ellipse(windowWidth * 0.45, windowHeight * 0.74, radioValvulas, radioValvulas);
+          ellipse(windowWidth * 0.15, windowHeight * 0.74, radioArquetas, radioArquetas);
         break;
       case "1":
-          fill('green');
-          ellipse(638, 550, 35, 35);
-          ellipse(200, 550, 55, 55);
+          fill('blue');
+          ellipse(windowWidth * 0.45, windowHeight * 0.74, radioValvulas, radioValvulas);
+          ellipse(windowWidth * 0.15, windowHeight * 0.74, radioArquetas, radioArquetas);
           break;
   }
   switch(electroB) {
       case "0":
           fill("red");
-          ellipse(703, 550, 35, 35);
-          rect(900, 200, 55, 55, 20);
+          ellipse(windowWidth * 0.49, windowHeight * 0.74, radioValvulas, radioValvulas);
+          rect(windowWidth * 0.65, windowHeight * 0.25, radioArquetas, radioArquetas, 20);
           break;
       case "1":
-          fill("green");
-          ellipse(703, 550, 35, 35);
-          rect(900, 200, 55, 55, 20);
+          fill("blue");
+          ellipse(windowWidth * 0.49, windowHeight * 0.74, radioValvulas, radioValvulas);
+          rect(windowWidth * 0.65, windowHeight * 0.25, radioArquetas, radioArquetas, 20);
           break;
   }
 
@@ -90,8 +93,10 @@ function draw() {
 function readData (data) {
 
     var datos = data.split("%");
-    distAgua = parseFloat(datos[0]);
-    tempAire = datos[1];
+    //distAgua = parseFloat(datos[0]);
+    //tempAire = datos[1];
+    distAgua = 65;
+    tempAire = 22.3;
     //distAgua = parseInt(data);
 
     if (distAgua <= 35) {

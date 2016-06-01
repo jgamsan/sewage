@@ -18,7 +18,6 @@ io = require('socket.io'),				// include socket.io
 app = express(),									// make an instance of express.js
 server = app.listen(8080),				// start a server with the express instance
 socketServer = io(server);	 			// make a socket server using the express server
-app.use(session({secret: 'ssshhhhh'}));
 
 // serial port initialization:
 var serialport = require('serialport'),			// include the serialport library
@@ -40,9 +39,20 @@ var Datastore = require('nedb')
 //  set up server and socketServer listener functions:
 app.use(express.static('public'));					// serve files from the public folder
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
-app.get('/:name', serveFiles);
-app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
-app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+var sess;
+app.get('/:name', serveFiles, function(req,res){
+    sess=req.session;
+    /*
+    * Here we have assign the 'session' to 'sess'.
+    * Now we can create any number of session variable we want.
+    * in PHP we do as $_SESSION['var name'].
+    * Here we do like this.
+    */
+    sess.data; // equivalent to $_SESSION['email'] in PHP.
+  });
+
+app.use(session({secret: 'ssshhhhh', saveUninitialized: true, resave: true}));
+
 // listener for all static file requests
 socketServer.on('connection', openSocket);	// listener for websocket data
 

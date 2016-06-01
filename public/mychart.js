@@ -2,14 +2,15 @@
  * Created by jose on 19/5/16.
  */
 var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
+var moment = require('moment');
+var a = moment().format();
 var db = new Nedb({ filename: '../db.json', autoload: true });
 
 db.find({ "hora": { $lt: a } }, {"altura": 1, "hora": 1, "_id": 0}, function (err, docs) {
     docs.forEach(function(value) {
         arr.push(value.altura)
     });
-    view_on_screen(arr);
+    console.log(sess.data);
 });
 
 var randomColorFactor = function() {
