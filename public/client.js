@@ -93,10 +93,8 @@ function draw() {
 function readData (data) {
 
     var datos = data.split("%");
-    //distAgua = parseFloat(datos[0]);
-    //tempAire = datos[1];
-    distAgua = 65;
-    tempAire = 22.3;
+    distAgua = parseFloat(datos[0]);
+    tempAire = datos[1];
     //distAgua = parseInt(data);
 
     if (distAgua <= 35) {
