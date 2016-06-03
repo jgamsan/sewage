@@ -14,6 +14,25 @@ by Tom Igoe
 // server initialization:
 var express = require('express');		// include express.js
 var session = require('express-session');
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+    host: 'smtp.mundo-r.com',
+    port: 25,
+    auth: {
+        user: '622500001',
+        pass: 'uha9559/',
+        secure: false,
+        authMethod: 'PLAIN'
+    }
+});
+var mailOptions = {
+    from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
+    to: 'jmiguel.gamazo@gmail.com', // list of receivers
+    subject: 'De Prueba ✔', // Subject line
+    text: 'De Prueba 🐴', // plaintext body
+    html: '<b>Hello world 🐴</b>' // html body
+};
+
 io = require('socket.io'),				// include socket.io
 app = express(),									// make an instance of express.js
 server = app.listen(8080),				// start a server with the express instance
@@ -50,6 +69,29 @@ app.get('/:name', serveFiles, function(req,res){
     */
     sess.data; // equivalent to $_SESSION['email'] in PHP.
   });
+// transporter.verify(function(error, success) {
+//    if (error) {
+//         console.log(error);
+//    } else {
+//         console.log('Server is ready to take our messages');
+//         transporter.sendMail(mailOptions, function(error, info){
+//           if(error){
+//               return console.log(error);
+//           }
+//           console.log('Message sent: ' + info.response);
+//       });
+//    }
+// });
+
+var a = moment().format();
+db.find({ "hora": { $lt: a } }, {"altura": 1, "hora": 1, "_id": 0}, function (err, docs) {
+    var arr = [];
+    docs.forEach(function(value) {
+        arr.push(value.altura)
+    });
+    console.log(arr);
+});
+
 
 app.use(session({secret: 'ssshhhhh', saveUninitialized: true, resave: true}));
 
@@ -69,7 +111,7 @@ function openSocket(socket){
 		//console.log('000');
 	} else {
 		socket.emit('message', '999');
-		//console.log('999');
+		console.log('999');
 	}
 
 	//socket.emit('message', 'Hello, ' + socket.handshake.address);
@@ -98,6 +140,6 @@ function openSocket(socket){
 
 	myPort.on('error', function() {
 		socket.emit('message', '999');
-		//console.log('999');
+		console.log('999');
 	});
 }
