@@ -25,14 +25,18 @@ var transporter = nodemailer.createTransport({
         authMethod: 'PLAIN'
     }
 });
+var tmp = require('tmp');
 XLSX = require('xlsx');
+
 var mailOptions = {
     from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
-    to: 'jmiguel.gamazo@gmail.com', // list of receivers
+    to: 'uha95@mundo-r.com', // list of receivers
     subject: 'De Prueba ✔', // Subject line
     text: 'De Prueba 🐴', // plaintext body
     html: '<b>Hello world 🐴</b>' // html body
 };
+
+
 
 io = require('socket.io'),				// include socket.io
 app = express(),									// make an instance of express.js
@@ -86,16 +90,30 @@ app.get('/:name', serveFiles, function(req,res){
 
 var a = moment().format();
 db.find({ "hora": { $lt: a } }, {"altura": 1, "hora": 1, "_id": 0}, function (err, docs) {
-    var arr = [];
-    docs.forEach(function(value) {
-        arr.push([value.altura, value.hora])
-    });
-    console.log(arr);
-    var ws_name = "SheetJS";
-    var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
-    wb.SheetNames.push(ws_name);
-    wb.Sheets[ws_name] = ws;
-    XLSX.writeFile(wb, 'test.xlsx');
+  var arr = [];
+  docs.forEach(function(value) {
+      arr.push([value.altura, moment(value.hora).format("HH:mm:ss")])
+  });
+  console.log(arr);
+  var ws_name = "SheetJS";
+  var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
+  wb.SheetNames.push(ws_name);
+  wb.Sheets[ws_name] = ws;
+  //XLSX.writeFile(wb, 'test.xlsx');
+  tmp.file({ mode: 0644, prefix: 'prefix-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
+    if (err) throw err;
+    XLSX.writeFile(wb, path);
+    // mailOptions['attachments'] = [{path: path}];
+    // transporter.sendMail(mailOptions, function(error, info){
+    //   if(error){
+    //       return console.log(error);
+    //   }
+    //   console.log('Message sent: ' + info.response);
+    // });
+    console.log("File: ", path);
+    console.log("Filedescriptor: ", fd);
+  });
+
 });
 
 /* write file */
@@ -193,7 +211,6 @@ function Workbook() {
   this.SheetNames = [];
   this.Sheets = {};
 }
-
 
 
 /* add worksheet to workbook */

@@ -2,16 +2,10 @@
  * Created by jose on 19/5/16.
  */
 var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var moment = require('moment');
-var a = moment().format();
-var db = new Nedb({ filename: '../db.json', autoload: true });
+//var moment = require('moment');
+//var a = moment().format();
 
-db.find({ "hora": { $lt: a } }, {"altura": 1, "hora": 1, "_id": 0}, function (err, docs) {
-    docs.forEach(function(value) {
-        arr.push(value.altura)
-    });
-    console.log(sess.data);
-});
+var db = new Nedb({ filename:  __dirname + '/db.json', autoload: true });
 
 var randomColorFactor = function() {
     return Math.round(Math.random() * 255);
@@ -21,13 +15,19 @@ var randomColor = function(opacity) {
     return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
 };
 
-var config = {
+db.find({"altura": 1, "hora": 1, "_id": 0}, function (err, docs) {
+  var arr = [];
+  docs.forEach(function(value) {
+    arr.push(value.altura)
+  });
+  console.log(docs);
+  var config = {
     type: 'line',
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: [34,36,43,38,45,42,38,38,47,40,41,48,44,47,48,48,37,44,46,47,37,39,35,35,36,34,41,33,41,37,39,49,49,33,39,40,43,33,43,32,47,36,38,49,47,37,38,37,44,48,41,44,43,41,37,41,33,41],
         datasets: [{
             label: "My First dataset",
-            data: [7,9,2,5,6,4,8],
+            data: [34,36,43,38,45,42,38,38,47,40,41,48,44,47,48,48,37,44,46,47,37,39,35,35,36,34,41,33,41,37,39,49,49,33,39,40,43,33,43,32,47,36,38,49,47,37,38,37,44,48,41,44,43,41,37,41,33,41],
             fill: true,
             borderDash: [5, 5],
             borderColor: randomColor(0.4),
@@ -87,16 +87,17 @@ var config = {
                     labelString: 'Value'
                 },
                 ticks: {
-                    suggestedMin: -1,
-                    suggestedMax: 15,
+                    suggestedMin: 0,
+                    suggestedMax: 60,
                 }
             }]
         }
     }
-};
+  };
+  var ctx = document.getElementById("mychart").getContext("2d");
+  var img = new Image();
+  img.src = ctx.toDataURL('image/png');
+  ctx.drawImage(img,200,150);
+  //var mychart = new Chart(ctx, config);
 
-window.onload = function() {
-    var ctx = document.getElementById("canvas").getContext("2d");
-    window.myLine = new Chart(ctx, config);
-};
-
+});
