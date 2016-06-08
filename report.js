@@ -11,9 +11,9 @@ var transporter = nodemailer.createTransport({
 });
 var tmp = require('tmp');
 XLSX = require('xlsx');
-var altura_maxima = 230;
-var linea_minima = 180;
-var linea_maxima = 210;
+var altura_maxima = 247;
+var linea_minima = 202;
+var linea_maxima = 212;
 var mailOptions = {
     from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
     to: 'uha95@mundo-r.com', // list of receivers
@@ -26,8 +26,10 @@ var moment = require('moment');
 var Datastore = require('nedb')
     , db = new Datastore({ filename: __dirname + '/db.json', autoload: true });
 
-var a = moment().format();
-db.find({ "hora": { $lt: a } }, {"altura": 1, "hora": 1, "_id": 0}, function (err, docs) {
+//var a = moment().format();
+a = moment().startOf('day').add(12, 'hours').subtract(1, 'days').format();
+b = moment().startOf('day').add(12, 'hours').format();
+db.find({ "hora": { $lte: a, $gte: b } }, {"altura": 1, "hora": 1, "_id": 0}, function (err, docs) {
   var arr = [];
   docs.forEach(function(value) {
       arr.push([moment(value.hora).format("HH:mm:ss"), altura_maxima - value.altura, linea_minima, linea_maxima])
@@ -42,12 +44,12 @@ db.find({ "hora": { $lt: a } }, {"altura": 1, "hora": 1, "_id": 0}, function (er
     if (err) throw err;
     XLSX.writeFile(wb, path);
     mailOptions['attachments'] = [{path: path}];
-    // transporter.sendMail(mailOptions, function(error, info){
-    //   if(error){
-    //       return console.log(error);
-    //   }
-    //   console.log('Message sent: ' + info.response);
-    // });
+    transporter.sendMail(mailOptions, function(error, info){
+      if(error){
+          return console.log(error);
+      }
+      console.log('Message sent: ' + info.response);
+    });
     console.log("File: ", path);
     console.log("Filedescriptor: ", fd);
     console.log(moment().startOf('year'));

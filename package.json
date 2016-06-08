@@ -17,7 +17,8 @@
     "bootstrap": "^3.3.6",
     "express-session": "^1.13.0",
     "nodemailer": "2.4.2",
-    "xlsx": "0.8.0"
+    "xlsx": "0.8.0",
+    "tmp": "0.0.28"
   },
   "devDependencies": {},
   "scripts": {
