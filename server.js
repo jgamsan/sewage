@@ -84,7 +84,7 @@ function openSocket(socket){
 		altura = parseFloat(datos[0]);
 		document = { altura: parseInt(altura), hora: a};
     SEW.insertLectura(document);
-    console.log(a);
+    //console.log(a);
 	});
 
 	// this function runs if port is closed:
