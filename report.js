@@ -61,7 +61,7 @@ var linea_maxima = 192;
 var linea_critica = 215
 var mailOptions = {
     from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
-    to: 'uha95@mundo-r.com, jgamsan@et.mde.es, eperlah@et.mde.es', // list of receivers
+    to: 'uha95@mundo-r.com, jgamsan@et.mde.es', // list of receivers
     subject: 'De Prueba ✔', // Subject line
     text: 'De Prueba 🐴', // plaintext body
     html: '<b>Hello world 🐴</b>' // html body
@@ -72,9 +72,10 @@ var sqlite3 = require('sqlite3').verbose(),
 db = new sqlite3.Database('sewage');
 
 
-a = moment().startOf('day').subtract(2, 'days').format("YYYY-MM-DD HH:mm:ss");
-b = moment().endOf('day').subtract(2, 'days').format("YYYY-MM-DD HH:mm:ss");
+a = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
+b = moment().endOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
 var query = "SELECT hora, altura FROM lecturas where hora between '" + a + "' AND '" + b + "';";
+var query_del = "DELETE * FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
 var arr = [];
 db.serialize(function() {
   db.all(query, function(err, rows)
@@ -83,14 +84,15 @@ db.serialize(function() {
       throw err;
     }
     else {
+      arr.push("Hora", 'Lectura', 'Linea Minima', 'Linea Maxima', 'Linea Critica');
       rows.forEach(function (row) {
         arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
       })
-      var ws_name = "SheetJS";
+      var ws_name = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD").toString();
       var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
       wb.SheetNames.push(ws_name);
       wb.Sheets[ws_name] = ws;
-      tmp.file({ mode: 0644, prefix: 'prefix-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
+      tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
         if (err) throw err;
         XLSX.writeFile(wb, path);
         mailOptions['attachments'] = [{path: path}];
