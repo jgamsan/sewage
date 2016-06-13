@@ -13,9 +13,6 @@ by Tom Igoe
 
 // server initialization:
 var express = require('express');		// include express.js
-var session = require('express-session');
-
-
 
 
 io = require('socket.io'),				// include socket.io
@@ -38,41 +35,20 @@ var myPort = new SerialPort(portName, portConfig, function(error) {
 	//console.log(error);
 });
 var moment = require('moment');
-var Datastore = require('nedb')
-    , db = new Datastore({ filename: __dirname + '/db.json', autoload: true });
-//  set up server and socketServer listener functions:
+
+
 app.use(express.static('public'));					// serve files from the public folder
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
 var sess;
 app.get('/:name', serveFiles, function(req,res){
-    sess=req.session;
     /*
     * Here we have assign the 'session' to 'sess'.
     * Now we can create any number of session variable we want.
     * in PHP we do as $_SESSION['var name'].
     * Here we do like this.
     */
-    sess.data; // equivalent to $_SESSION['email'] in PHP.
   });
-// transporter.verify(function(error, success) {
-//    if (error) {
-//         console.log(error);
-//    } else {
-//         console.log('Server is ready to take our messages');
-//         transporter.sendMail(mailOptions, function(error, info){
-//           if(error){
-//               return console.log(error);
-//           }
-//           console.log('Message sent: ' + info.response);
-//       });
-//    }
-// });
-
-
-
-/* write file */
-
-app.use(session({secret: 'ssshhhhh', saveUninitialized: true, resave: true}));
+var SEW = require('./models/sewage');
 
 // listener for all static file requests
 socketServer.on('connection', openSocket);	// listener for websocket data
@@ -103,13 +79,12 @@ function openSocket(socket){
 	// this function runs if there's input from the serialport:
 	myPort.on('data', function(data) {
 		socket.emit('message', data);		// send the data to the client
-		var a = moment().format();
-		var datos = data.split("%");
-		var altura = parseFloat(datos[0]);
-		var document = { altura: parseInt(altura), hora: a};
-		db.insert(document, function (err, newDoc) {
-		});
-		//console.log(data);
+		a = moment().format("YYYY-MM-DD HH:mm:ss");
+		datos = data.split("%");
+		altura = parseFloat(datos[0]);
+		document = { altura: parseInt(altura), hora: a};
+    SEW.insertLectura(document);
+    console.log(a);
 	});
 
 	// this function runs if port is closed:

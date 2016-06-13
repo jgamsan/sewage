@@ -17,12 +17,15 @@ function setup() {
   createCanvas(windowWidth, windowHeight);   // set up the canvas
   alturaFosa = 247;
   percent = (windowHeight - 40) / 300;
-  distanciaMinima = 45;
-  distanciaMaxima = 35;
-  alturaMinima = alturaFosa - 45;
-  alturaMaxima = alturaFosa - 35;
+  distanciaMinima = 95;
+  distanciaMaxima = 55;
+  distanciaCritica = 32;
+  alturaMinima = alturaFosa - distanciaMinima;
+  alturaMaxima = alturaFosa - distanciaMaxima;
+  alturaCritica = alturaFosa - distanciaCritica;
   linea_minima = distanciaMinima * percent + 40;
   linea_maxima = distanciaMaxima * percent + 40;
+  linea_critica = distanciaCritica * percent + 40;
   anchoMedidor = 0.05 * windowWidth;
   radioValvulas = 0.05 * windowHeight;
   radioArquetas = 0.07 * windowHeight;
@@ -34,6 +37,7 @@ function draw() {
   textSize(0.03 * windowHeight);
   text("Linea Minima " + alturaMinima, anchoMedidor + 60, linea_minima);
   text("Linea Maxima " + alturaMaxima, anchoMedidor + 60, linea_maxima);
+  text("Linea Critica " + alturaCritica, anchoMedidor + 60, linea_critica);
   altura = percent * distAgua + 40;
   nivel_fosa = alturaFosa - distAgua;
 
@@ -51,6 +55,7 @@ function draw() {
   rect(30,floor(altura),anchoMedidor,floor(height));
   noFill();
   strokeWeight(3);
+  line(20, linea_critica, anchoMedidor + 40, linea_critica);
   line(20, linea_minima, anchoMedidor + 40, linea_minima);
   line(20, linea_maxima, anchoMedidor + 40, linea_maxima);
   fill('green');
@@ -97,10 +102,10 @@ function readData (data) {
     tempAire = datos[1];
     //distAgua = parseInt(data);
 
-    if (distAgua <= 35) {
+    if (distAgua <= distanciaMaxima) {
         electroA = "0";
         electroB = "1";
-    } else if (distAgua > 35 && distAgua <= 45) {
+    } else if (distAgua > distanciaMaxima && distAgua <= distanciaMinima) {
         electroA = "1";
         electroB = "1";
     } else {

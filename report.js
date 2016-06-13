@@ -1,62 +1,3 @@
-var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport({
-    host: 'smtp.mundo-r.com',
-    port: 25,
-    auth: {
-        user: '622500001',
-        pass: 'uha9559/',
-        secure: false,
-        authMethod: 'PLAIN'
-    }
-});
-var tmp = require('tmp');
-XLSX = require('xlsx');
-var altura_maxima = 247;
-var linea_minima = 202;
-var linea_maxima = 212;
-var mailOptions = {
-    from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
-    to: 'uha95@mundo-r.com', // list of receivers
-    subject: 'De Prueba ✔', // Subject line
-    text: 'De Prueba 🐴', // plaintext body
-    html: '<b>Hello world 🐴</b>' // html body
-};
-
-var moment = require('moment');
-var Datastore = require('nedb')
-    , db = new Datastore({ filename: __dirname + '/db.json', autoload: true });
-
-//var a = moment().format();
-a = moment().startOf('day').add(12, 'hours').subtract(1, 'days').format();
-b = moment().startOf('day').add(12, 'hours').format();
-db.find({ "hora": { $lte: a, $gte: b } }, {"altura": 1, "hora": 1, "_id": 0}, function (err, docs) {
-  var arr = [];
-  docs.forEach(function(value) {
-      arr.push([moment(value.hora).format("HH:mm:ss"), altura_maxima - value.altura, linea_minima, linea_maxima])
-  });
-  console.log(arr);
-  var ws_name = "SheetJS";
-  var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
-  wb.SheetNames.push(ws_name);
-  wb.Sheets[ws_name] = ws;
-  //XLSX.writeFile(wb, 'test.xlsx');
-  tmp.file({ mode: 0644, prefix: 'prefix-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
-    if (err) throw err;
-    XLSX.writeFile(wb, path);
-    mailOptions['attachments'] = [{path: path}];
-    transporter.sendMail(mailOptions, function(error, info){
-      if(error){
-          return console.log(error);
-      }
-      console.log('Message sent: ' + info.response);
-    });
-    console.log("File: ", path);
-    console.log("Filedescriptor: ", fd);
-    console.log(moment().startOf('year'));
-  });
-
-});
-
 function datenum(v, date1904) {
   if(date1904) v+=1462;
   var epoch = Date.parse(v);
@@ -99,3 +40,67 @@ function Workbook() {
   this.SheetNames = [];
   this.Sheets = {};
 }
+
+
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+    host: 'smtp.mundo-r.com',
+    port: 25,
+    auth: {
+        user: '622500001',
+        pass: 'uha9559/',
+        secure: false,
+        authMethod: 'PLAIN'
+    }
+});
+var tmp = require('tmp');
+XLSX = require('xlsx');
+var altura_maxima = 247;
+var linea_minima = 152;
+var linea_maxima = 192;
+var linea_critica = 215
+var mailOptions = {
+    from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
+    to: 'uha95@mundo-r.com, jgamsan@et.mde.es, eperlah@et.mde.es', // list of receivers
+    subject: 'De Prueba ✔', // Subject line
+    text: 'De Prueba 🐴', // plaintext body
+    html: '<b>Hello world 🐴</b>' // html body
+};
+
+var moment = require('moment');
+var sqlite3 = require('sqlite3').verbose(),
+db = new sqlite3.Database('sewage');
+
+
+a = moment().startOf('day').subtract(2, 'days').format("YYYY-MM-DD HH:mm:ss");
+b = moment().endOf('day').subtract(2, 'days').format("YYYY-MM-DD HH:mm:ss");
+var query = "SELECT hora, altura FROM lecturas where hora between '" + a + "' AND '" + b + "';";
+var arr = [];
+db.serialize(function() {
+  db.all(query, function(err, rows)
+    {
+    if(err) {
+      throw err;
+    }
+    else {
+      rows.forEach(function (row) {
+        arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
+      })
+      var ws_name = "SheetJS";
+      var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
+      wb.SheetNames.push(ws_name);
+      wb.Sheets[ws_name] = ws;
+      tmp.file({ mode: 0644, prefix: 'prefix-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
+        if (err) throw err;
+        XLSX.writeFile(wb, path);
+        mailOptions['attachments'] = [{path: path}];
+        transporter.sendMail(mailOptions, function(error, info){
+          if(error){
+              //return console.log(error);
+          }
+          //console.log('Message sent: ' + info.response);
+        });
+      });
+    }
+  });
+});
