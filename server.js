@@ -81,8 +81,7 @@ function openSocket(socket){
 		socket.emit('message', data);		// send the data to the client
 		a = moment().format("YYYY-MM-DD HH:mm:ss");
 		datos = data.split("%");
-		altura = parseFloat(datos[0]);
-		document = { altura: parseInt(altura), hora: a};
+		document = { altura: parseInt(datos[0]), hora: a};
     SEW.insertLectura(document);
     //console.log(a);
 	});
