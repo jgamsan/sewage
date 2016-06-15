@@ -83,34 +83,34 @@ db.serialize(function() {
     if(err) {
       throw err;
     }
-    else {
-      arr.push("Hora", 'Lectura', 'Linea Minima', 'Linea Maxima', 'Linea Critica');
-      rows.forEach(function (row) {
-        arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
-      })
-      var ws_name = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD").toString();
-      var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
-      wb.SheetNames.push(ws_name);
-      wb.Sheets[ws_name] = ws;
-      tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
-        if (err) throw err;
-        XLSX.writeFile(wb, path);
-        mailOptions['attachments'] = [{path: path}];
-        transporter.sendMail(mailOptions, function(error, info){
-          if(error){
-              //return console.log(error);
-          }
-          db.run(query, function(err, rows)
+    else
+      {
+        arr.push("Hora", 'Lectura', 'Linea Minima', 'Linea Maxima', 'Linea Critica');
+        rows.forEach(function (row) {
+          arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
+        })
+        var ws_name = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD").toString();
+        var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
+        wb.SheetNames.push(ws_name);
+        wb.Sheets[ws_name] = ws;
+        tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd)
           {
-          if(err) {
-            throw err;
-          }
-          else {
-            //console.log("Borrado perfectamente");
-          }
+            if (err) throw err;
+            XLSX.writeFile(wb, path);
+            mailOptions['attachments'] = [{path: path}];
+            transporter.sendMail(mailOptions, function(error, info){
+          if(error){ }
+          db.run(query_del, function(err, rows) {
+            if(err) {
+              throw err;
+            }
+            else {
+              //console.log("Borrado perfectamente");
+            }
           //console.log('Message sent: ' + info.response);
         });
       });
+          })
     }
-  });
+    })
 });

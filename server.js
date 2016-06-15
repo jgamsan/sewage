@@ -63,7 +63,6 @@ myPort.on('data', function(data) {
 	datos = data.split("%");
 	document = { altura: parseInt(datos[0]), hora: a};
 	SEW.insertLectura(document);
-	console.log(data);
 });
 
 function openSocket(socket){
