@@ -97,6 +97,16 @@ function openSocket(socket){
 		socket.emit('message', '999');
 		console.log('999');
 	});
+
+	myPort.on('close', function(){
+		myPort.open(function (err) {
+      if (err) {
+        return console.log('Error opening port: ', err.message);
+      } else {
+        console.log("Puerto Abierto");
+      }
+    })
+	});
 }
 
 

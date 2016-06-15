@@ -11,14 +11,15 @@ query = 'SELECT hora, altura FROM lecturas;';
 //query = 'SELECT hora, altura FROM lecturas;';
 
 db.serialize(function() {
-  db.all(query, function(err, rows)
-    {
-    if(err) {
-      throw err;
-    }
-    else {
-      //callback(null, rows);
-      console.log(rows);
-    }
+  db.each(query, function(err, row) {
+    console.log(row.hora + ": " + row.altura);
   });
 });
+
+var fs = require('fs');
+var writeStream = fs.createWriteStream("file.xls");
+
+
+writeStream.write("Sl No"+"\t"+" Age"+"\t"+"Name"+"\n"+"0"+"\t"+String(21)+"\t"+"Rob"+"\n"+"1"+"\t"+" 22"+"\t"+"bob"+"\n");
+
+writeStream.close();

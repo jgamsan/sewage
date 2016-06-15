@@ -53,29 +53,32 @@ var transporter = nodemailer.createTransport({
         authMethod: 'PLAIN'
     }
 });
+var moment = require('moment');
 var tmp = require('tmp');
 XLSX = require('xlsx');
 var altura_maxima = 247;
 var linea_minima = 152;
 var linea_maxima = 192;
-var linea_critica = 215
+var linea_critica = 215;
+
 var mailOptions = {
     from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
     to: 'uha95@mundo-r.com, jgamsan@et.mde.es', // list of receivers
-    subject: 'De Prueba ✔', // Subject line
-    text: 'De Prueba 🐴', // plaintext body
-    html: '<b>Hello world 🐴</b>' // html body
+    subject: 'Informe Diario Depuradora CMT Parga ✔', // Subject line
+    text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
 
-var moment = require('moment');
+
 var sqlite3 = require('sqlite3').verbose(),
 db = new sqlite3.Database('sewage');
 
 
 a = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
 b = moment().endOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
-var query = "SELECT hora, altura FROM lecturas where hora between '" + a + "' AND '" + b + "';";
-var query_del = "DELETE FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
+//var query = "SELECT hora, altura FROM lecturas where hora between '" + a + "' AND '" + b + "';";
+var query = "select * FROM lecturas;";
+//var query_del = "DELETE FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
+var query_del = "DELETE FROM lecturas;"
 var arr = [];
 db.serialize(function() {
   db.all(query, function(err, rows)
@@ -99,17 +102,17 @@ db.serialize(function() {
             XLSX.writeFile(wb, path);
             mailOptions['attachments'] = [{path: path}];
             transporter.sendMail(mailOptions, function(error, info){
-          if(error){ }
-          db.run(query_del, function(err, rows) {
-            if(err) {
-              throw err;
-            }
-            else {
-              //console.log("Borrado perfectamente");
-            }
-          //console.log('Message sent: ' + info.response);
-        });
-      });
+              if(error){ }
+              db.run(query_del, function(err, rows) {
+                if(err) {
+                  throw err;
+                }
+                else {
+                  //console.log("Borrado perfectamente");
+                }
+                //console.log('Message sent: ' + info.response);
+              });
+            });
           })
     }
     })
