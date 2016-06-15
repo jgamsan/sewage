@@ -21,7 +21,7 @@ if (myPort.isOpen()) {
         return console.log('Error opening port: ', err.message);
       } else {
         console.log("Puerto Abierto");
-        process.exit(code);
+        process.exit(0);
       }
     })
 }
