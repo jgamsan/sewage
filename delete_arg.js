@@ -4,7 +4,7 @@ db = new sqlite3.Database('sewage');
 var query = "DELETE * FROM lecturas WHERE hora BETWEEN '" + process.argv[2] + "' AND '" + process.argv[3] + "';";
 
 db.serialize(function() {
-  db.all(query, function(err, rows)
+  db.run(query, function(err, rows)
     {
     if(err) {
       throw err;
