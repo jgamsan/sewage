@@ -75,7 +75,7 @@ db = new sqlite3.Database('sewage');
 a = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
 b = moment().endOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
 var query = "SELECT hora, altura FROM lecturas where hora between '" + a + "' AND '" + b + "';";
-var query_del = "DELETE * FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
+var query_del = "DELETE FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
 var arr = [];
 db.serialize(function() {
   db.all(query, function(err, rows)
@@ -99,6 +99,14 @@ db.serialize(function() {
         transporter.sendMail(mailOptions, function(error, info){
           if(error){
               //return console.log(error);
+          }
+          db.run(query, function(err, rows)
+          {
+          if(err) {
+            throw err;
+          }
+          else {
+            //console.log("Borrado perfectamente");
           }
           //console.log('Message sent: ' + info.response);
         });

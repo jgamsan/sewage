@@ -58,6 +58,14 @@ function serveFiles(request, response) {
 	response.sendFile(fileName, {"root": __dirname});							// send the file
 }
 
+myPort.on('data', function(data) {
+	a = moment().format("YYYY-MM-DD HH:mm:ss");
+	datos = data.split("%");
+	document = { altura: parseInt(datos[0]), hora: a};
+	SEW.insertLectura(document);
+	console.log(data);
+});
+
 function openSocket(socket){
 	//console.log('new user address: ' + socket.handshake.address);
 	// send something to the web client with the data:
@@ -79,11 +87,6 @@ function openSocket(socket){
 	// this function runs if there's input from the serialport:
 	myPort.on('data', function(data) {
 		socket.emit('message', data);		// send the data to the client
-		a = moment().format("YYYY-MM-DD HH:mm:ss");
-		datos = data.split("%");
-		document = { altura: parseInt(datos[0]), hora: a};
-    SEW.insertLectura(document);
-    //console.log(a);
 	});
 
 	// this function runs if port is closed:
