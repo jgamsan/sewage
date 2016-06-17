@@ -13,6 +13,7 @@ var socket = io();		      // socket.io instance. Connects back to the server
 var x, height, distAgua, alturaFosa;
 var tempAire;// readings from the server
 var electroA, electroB;
+var code, text_error;
 function setup() {
   createCanvas(windowWidth, windowHeight);   // set up the canvas
   alturaFosa = 247;
@@ -45,7 +46,7 @@ function draw() {
   text("Valvula de Retorno", windowWidth * 0.3, windowHeight * 0.75);
   text("Valvula de Vertido", windowWidth * 0.51, windowHeight * 0.75);
   textSize(0.03 * windowHeight);
-  text("Nivel Fosa: " + nivel_fosa + " cm", windowWidth * 0.18, 0.90 * windowHeight);
+  text("Nivel Fosa: " + nf(nivel_fosa, 3, 1) + " cm", windowWidth * 0.18, 0.90 * windowHeight);
   text("Temperatura Aire: " + tempAire + "ºC", windowWidth * 0.18, 0.95 * windowHeight);
   text(day() + "/" + month() + "/" + year(), 1100, 50);
   fill(255);
@@ -89,18 +90,25 @@ function draw() {
   }
 
   fill('black');
-  if (distAgua == 999) {
+  if (code == 999) {
     textSize(15);
-    text("Puerto Serie no conectado",1000,500);
+    text(text_error,1000,500);
   }
 }
 
-function readData (data) {
+function readData(data) {
 
     var datos = data.split("%");
-    distAgua = parseFloat(datos[0]);
-    tempAire = datos[1];
-    //distAgua = parseInt(data);
+    if (datos[0] == 999) {
+      code = datos[0];
+      text_error = datos[1];
+    } else {
+      distAgua = parseFloat(datos[0]);
+      tempAire = datos[1];
+      code = 0;
+      text_error= '';
+    }
+
 
     if (distAgua <= distanciaMaxima) {
         electroA = "0";

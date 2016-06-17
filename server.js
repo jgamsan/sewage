@@ -113,7 +113,6 @@ function openSocket(socket){
 	// send something to the web client with the data:
 	if (myPort.isOpen()) {
 		socket.emit('message', '000');
-		//console.log('000');
 	} else {
 		socket.emit('message', '999');
 		console.log('999');
@@ -133,20 +132,23 @@ function openSocket(socket){
 
 	// this function runs if port is closed:
 	myPort.on('disconnect', function() {
-		//console.log("Port is closed");
+		socket.emit('message', '999%Puerto Desconectado');
 	});
 
 	myPort.on('error', function() {
-		socket.emit('message', '999');
+		socket.emit('message', '999%Error en apertura de Puerto');
 		console.log('999');
 	});
 
 	myPort.on('close', function(){
-		myPort.open(function (err) {
+		socket.emit('message', '999%Puerto Cerrado. Intentando abrir ......');
+    myPort.open(function (err) {
       if (err) {
-        return console.log('Error opening port: ', err.message);
+        console.log('Error opening port: ', err.message);
+        socket.emit('message', '999%Se ha itentado abrir el Puerto. No fue posible');
       } else {
         console.log("Puerto Abierto");
+        socket.emit('message', '999%Se ha conseguido abrir el puerto');
       }
     })
 	});
