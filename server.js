@@ -36,6 +36,23 @@ var myPort = new SerialPort(portName, portConfig, function(error) {
 });
 var moment = require('moment');
 
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+    host: 'smtp.mundo-r.com',
+    port: 25,
+    auth: {
+        user: '622500001',
+        pass: 'uha9559/',
+        secure: false,
+        authMethod: 'PLAIN'
+    }
+});
+var mailOptions = {
+    from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
+    to: 'uha95@mundo-r.com, jgamsan@et.mde.es', // list of receivers
+    subject: 'Informe Diario Depuradora CMT Parga ✔', // Subject line
+    text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
+};
 
 app.use(express.static('public'));					// serve files from the public folder
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
@@ -53,17 +70,43 @@ var SEW = require('./models/sewage');
 // listener for all static file requests
 socketServer.on('connection', openSocket);	// listener for websocket data
 
+myPort.on('open', showPortOpen);
+myPort.on('data', saveSerialData);
+myPort.on('close', notifyPortClose);
+myPort.on('error', showError);
+
+
+
 function serveFiles(request, response) {
 	var fileName = request.params.name;				// get the file name from the request
 	response.sendFile(fileName, {"root": __dirname});							// send the file
 }
 
-myPort.on('data', function(data) {
-	a = moment().format("YYYY-MM-DD HH:mm:ss");
-	datos = data.split("%");
-	document = { altura: parseInt(datos[0]), hora: a};
-	SEW.insertLectura(document);
-});
+
+
+function showPortOpen() {
+   console.log('port open. Data rate: ' + myPort.options.baudRate);
+}
+
+function saveSerialData(data) {
+  a = moment().format("YYYY-MM-DD HH:mm:ss");
+  datos = data.split("%");
+  document = { altura: parseInt(datos[0]), hora: a};
+  SEW.insertLectura(document);
+}
+
+function notifyPortClose() {
+  mailOptions['subject'] = 'Informando error en Comunicaciones Depuradora';
+  mailOptions['text'] = 'Se ha producido un error en el puerto de comunicacion de datos entre Arduino y Raspberry. EL PUERTO SE HA CERRADO. La hora del fallo es ' + moment().format("HH:mm:ss");
+  transporter.sendMail(mailOptions, function(error, info){
+    if(error){ }
+  });
+}
+
+function showError(error) {
+   console.log('Serial port error: ' + error);
+}
+
 
 function openSocket(socket){
 	//console.log('new user address: ' + socket.handshake.address);

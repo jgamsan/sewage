@@ -27,7 +27,7 @@
     "type": "git",
     "url": "git+ssh://git@bitbucket.org/gamazos/sewage.git"
   },
-  "author": "",
+  "author": "Jose Miguel Gamazo Sanchez",
   "license": "ISC",
   "homepage": "https://bitbucket.org/gamazos/sewage#readme"
 }
