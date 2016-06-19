@@ -85,7 +85,7 @@ function serveFiles(request, response) {
 
 
 function showPortOpen() {
-   console.log('port open. Data rate: ' + myPort.options.baudRate);
+   //console.log('port open. Data rate: ' + myPort.options.baudRate);
 }
 
 function saveSerialData(data) {
@@ -96,29 +96,30 @@ function saveSerialData(data) {
 }
 
 function notifyPortClose() {
-  mailOptions['subject'] = 'Informando error en Comunicaciones Depuradora';
-  mailOptions['text'] = 'Se ha producido un error en el puerto de comunicacion de datos entre Arduino y Raspberry. EL PUERTO SE HA CERRADO. La hora del fallo es ' + moment().format("HH:mm:ss");
+  mailOptions['subject'] = 'Informando Cierre en Puerto Comunicaciones Depuradora';
+  mailOptions['text'] = 'Se ha cerrado el puerto de comunicacion de datos entre Arduino y Raspberry. EL PUERTO ESTA CERRADO. La hora del fallo es: ' + moment().format("HH:mm:ss");
   transporter.sendMail(mailOptions, function(error, info){
     if(error){ }
   });
 }
 
 function showError(error) {
-   console.log('Serial port error: ' + error);
+   mailOptions['subject'] = 'Informando error en Comunicaciones Depuradora';
+   mailOptions['text'] = 'Se ha producido un error en el puerto de comunicacion de datos entre Arduino y Raspberry. EL CODIGO DE ERROR ES: ' + error + '. La hora del fallo es: ' + moment().format("HH:mm:ss");
+   transporter.sendMail(mailOptions, function(error, info){
+     if(error){ }
+   });
 }
 
 
 function openSocket(socket){
-	//console.log('new user address: ' + socket.handshake.address);
-	// send something to the web client with the data:
+
 	if (myPort.isOpen()) {
 		socket.emit('message', '000');
 	} else {
-		socket.emit('message', '999');
-		console.log('999');
+		socket.emit('message', '999%Error en Puerto. No enlace con Arduino');
+		//console.log('999%error en puerto');
 	}
-
-	//socket.emit('message', 'Hello, ' + socket.handshake.address);
 
 	// this function runs if there's input from the client:
 	socket.on('message', function(data) {
@@ -137,17 +138,16 @@ function openSocket(socket){
 
 	myPort.on('error', function() {
 		socket.emit('message', '999%Error en apertura de Puerto');
-		console.log('999');
 	});
 
 	myPort.on('close', function(){
 		socket.emit('message', '999%Puerto Cerrado. Intentando abrir ......');
     myPort.open(function (err) {
       if (err) {
-        console.log('Error opening port: ', err.message);
+        //console.log('Error opening port: ', err.message);
         socket.emit('message', '999%Se ha itentado abrir el Puerto. No fue posible');
       } else {
-        console.log("Puerto Abierto");
+        //console.log("Puerto Abierto");
         socket.emit('message', '999%Se ha conseguido abrir el puerto');
       }
     })

@@ -91,7 +91,7 @@ function draw() {
 
   fill('black');
   if (code == 999) {
-    textSize(15);
+    textSize(0.03 * windowHeight);
     text(text_error,1000,500);
   }
 }
@@ -99,6 +99,7 @@ function draw() {
 function readData(data) {
 
     var datos = data.split("%");
+    console.log(data);
     if (datos[0] == 999) {
       code = datos[0];
       text_error = datos[1];
