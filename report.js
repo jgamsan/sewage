@@ -76,7 +76,7 @@ db = new sqlite3.Database('sewage');
 a = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
 b = moment().endOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
 
-var query = "select * FROM lecturas;";
+var query = "select * FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
 var query_del = "DELETE FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
 
 var arr = [];
