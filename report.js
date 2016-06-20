@@ -63,7 +63,7 @@ var linea_critica = 215;
 
 var mailOptions = {
     from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
-    to: 'uha95@mundo-r.com, jgamsan@et.mde.es', // list of receivers
+    to: 'uha95@mundo-r.com, jgamsan@et.mde.es, eperlah@et.mde.es', // list of receivers
     subject: 'Informe Diario Depuradora CMT Parga ✔', // Subject line
     text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
