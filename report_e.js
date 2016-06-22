@@ -76,10 +76,7 @@ var sqlite3 = require('sqlite3').verbose(),
 db = new sqlite3.Database('sewage');
 
 
-a = process.argv[2];
-b = process.argv[3];
-
-var query = "select * FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
+var query = "SELECT hora, altura FROM lecturas where hora between '" + process.argv[2] + "' AND '" + process.argv[3] + "';";
 
 var arr = [];
 db.serialize(function() {
