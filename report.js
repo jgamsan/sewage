@@ -95,22 +95,22 @@ db.serialize(function() {
         var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
         wb.SheetNames.push(ws_name);
         wb.Sheets[ws_name] = ws;
-        tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xls' }, function _tempFileCreated(err, path, fd)
+        tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd)
           {
             if (err) throw err;
             XLSX.writeFile(wb, path);
             mailOptions['attachments'] = [{path: path}];
             transporter.sendMail(mailOptions, function(error, info){
               if(error){ }
-              db.run(query_del, function(err, rows) {
+              /*db.run(query_del, function(err, rows) {
                 if(err) {
                   throw err;
                 }
                 else {
-                  //console.log("Borrado perfectamente");
+
                 }
-                //console.log('Message sent: ' + info.response);
-              });
+
+              });*/
             });
           })
     }
