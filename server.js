@@ -12,8 +12,7 @@ by Tom Igoe
 */
 
 // server initialization:
-var express = require('express');		// include express.js
-
+var express = require('express');
 
 io = require('socket.io'),				// include socket.io
 app = express(),									// make an instance of express.js
@@ -21,19 +20,19 @@ server = app.listen(8080),				// start a server with the express instance
 socketServer = io(server);	 			// make a socket server using the express server
 
 // serial port initialization:
-var serialport = require('serialport'),			// include the serialport library
-SerialPort  = serialport.SerialPort,			// make a local instance of serial
-portName = '/dev/ttyACM0',								// get the port name from the command line
-portConfig = {
-	baudRate: 9600,
-	// call myPort.on('data') when a newline is received:
-	parser: serialport.parsers.readline('\n')
-};
+var SerialPort = require('serialport');			// include the serialport library
+// portName = '/dev/ttyACM0',								// get the port name from the command line
+// portConfig = {
+// 	baudRate: 9600,
+// 	// call myPort.on('data') when a newline is received:
+// 	parser: Serialport.parsers.readline('\n')
+// };
 
 // open the serial port:
-var myPort = new SerialPort(portName, portConfig, function(error) {
-	//console.log(error);
+var myPort = new SerialPort('/dev/cu.usbmodem1411', {
+  parser: SerialPort.parsers.readline('\n')
 });
+
 var moment = require('moment');
 
 var nodemailer = require('nodemailer');
@@ -56,7 +55,7 @@ var mailOptions = {
 
 app.use(express.static('public'));					// serve files from the public folder
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
-var sess;
+
 app.get('/:name', serveFiles, function(req,res){
     /*
     * Here we have assign the 'session' to 'sess'.
@@ -64,7 +63,10 @@ app.get('/:name', serveFiles, function(req,res){
     * in PHP we do as $_SESSION['var name'].
     * Here we do like this.
     */
-  });
+});
+app.get('/', function(req, res) {
+    res.render('index');
+});
 var SEW = require('./models/sewage');
 
 // listener for all static file requests
@@ -106,9 +108,11 @@ function notifyPortClose() {
 function showError(error) {
    mailOptions['subject'] = 'Informando error en Comunicaciones Depuradora';
    mailOptions['text'] = 'Se ha producido un error en el puerto de comunicacion de datos entre Arduino y Raspberry. EL CODIGO DE ERROR ES: ' + error + '. La hora del fallo es: ' + moment().format("HH:mm:ss");
-   transporter.sendMail(mailOptions, function(error, info){
-     if(error){ }
-   });
+   if (app.settings.env == 'production') {
+     transporter.sendMail(mailOptions, function(error, info){
+       if(error){ }
+     });
+   }
 }
 
 
@@ -123,6 +127,7 @@ function openSocket(socket){
 
 	// this function runs if there's input from the client:
 	socket.on('message', function(data) {
+		console.log(data);
 		myPort.write(data);							// send the data to the serial device
 	});
 
@@ -158,4 +163,3 @@ function openSocket(socket){
 
 
 /* add worksheet to workbook */
-
