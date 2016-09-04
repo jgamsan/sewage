@@ -52,6 +52,21 @@ var mailOptions = {
     subject: 'Informe Diario Depuradora CMT Parga ✔', // Subject line
     text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
+var MongoClient = require('mongodb').MongoClient
+  , assert = require('assert');
+var url = 'mongodb://localhost:27017/sewage';
+var Agenda = require('agenda');
+var url = 'mongodb://localhost:27017/sewage';
+var agenda = new Agenda({db: {address: url, collection: "jobs"}});
+agenda.define('start agitator', function() {
+  myPort.write('700');
+});
+agenda.define('shutdown agitator', function() {
+  myPort.write('799');
+});
+agenda.on('ready', function() {
+  agenda.start();
+});
 
 app.use(express.static('public'));					// serve files from the public folder
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
@@ -67,7 +82,7 @@ app.get('/:name', serveFiles, function(req,res){
 app.get('/', function(req, res) {
     res.render('index');
 });
-var SEW = require('./models/sewage');
+//var SEW = require('./models/sewage');
 
 // listener for all static file requests
 socketServer.on('connection', openSocket);	// listener for websocket data
@@ -93,8 +108,16 @@ function showPortOpen() {
 function saveSerialData(data) {
   a = moment().format("YYYY-MM-DD HH:mm:ss");
   datos = data.split("%");
-  document = { altura: parseInt(datos[0]), hora: a};
-  SEW.insertLectura(document);
+  documento = { altura: parseInt(datos[0]), hora: a};
+  MongoClient.connect(url, function(err, db) {
+    assert.equal(null, err);
+    //console.log("Connected successfully to server");
+
+    db.collection('lecturas').insertOne(documento, function(err) {
+      assert.equal(null, err);
+      db.close();
+    });
+  });
 }
 
 function notifyPortClose() {
