@@ -29,7 +29,7 @@ var SerialPort = require('serialport');			// include the serialport library
 // };
 
 // open the serial port:
-var myPort = new SerialPort('/dev/ttyACM0', {
+var myPort = new SerialPort('/dev/tty.usbmodem1411', {
   parser: SerialPort.parsers.readline('\n')
 });
 
@@ -52,8 +52,9 @@ var mailOptions = {
     subject: 'Informe Diario Depuradora CMT Parga ✔', // Subject line
     text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
-var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017/sewage';
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/sewage');
+var Lectura = require('./models/lecturas');
 var Agenda = require('agenda');
 var url = 'mongodb://localhost:27017/sewage';
 var agenda = new Agenda({db: {address: url, collection: "jobs"}});
@@ -107,15 +108,11 @@ function showPortOpen() {
 function saveSerialData(data) {
   a = moment().format("YYYY-MM-DD HH:mm:ss");
   datos = data.split("%");
-  documento = { altura: parseInt(datos[0]), hora: a};
-  MongoClient.connect(url, function(err, db) {
-    assert.equal(null, err);
-    //console.log("Connected successfully to server");
+  var newLectura = Lectura({altura: parseInt(datos[0]), hora: a});
+  newLectura.save(function(err) {
+    if (err) throw err;
 
-    db.collection('lecturas').insertOne(documento, function(err) {
-      assert.equal(null, err);
-      db.close();
-    });
+    console.log('User created!');
   });
 }
 
