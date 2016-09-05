@@ -29,7 +29,7 @@ var SerialPort = require('serialport');			// include the serialport library
 // };
 
 // open the serial port:
-var myPort = new SerialPort('dev/ttyACM0', {
+var myPort = new SerialPort('/dev/ttyACM0', {
   parser: SerialPort.parsers.readline('\n')
 });
 

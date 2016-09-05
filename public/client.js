@@ -146,7 +146,7 @@ function draw() {
 function readData(data) {
 
     var datos = data.split("%");
-    console.log(datos[3]);
+    //console.log(datos[3]);
     if (datos[0] == 999) {
       textInfo.value(datos[1]);
     } else {
