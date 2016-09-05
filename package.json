@@ -16,7 +16,6 @@
     "serialport": "^4.0.1",
     "socket.io": "^1.4.5",
     "socket.io-client": "^1.4.6",
-    "sqlite3": "^3.1.4",
     "tmp": "0.0.28",
     "xlsx": "0.8.0"
   },
