@@ -52,8 +52,7 @@ var mailOptions = {
     subject: 'Informe Diario Depuradora CMT Parga ✔', // Subject line
     text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
-var MongoClient = require('mongodb').MongoClient
-  , assert = require('assert');
+var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://localhost:27017/sewage';
 var Agenda = require('agenda');
 var url = 'mongodb://localhost:27017/sewage';
