@@ -52,9 +52,9 @@ var mailOptions = {
     subject: 'Informe Diario Depuradora CMT Parga ✔', // Subject line
     text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
-var MongoClient = require('mongodb').MongoClient
-  , assert = require('assert');
-var url = 'mongodb://localhost:27017/sewage';
+//var MongoClient = require('mongodb').MongoClient
+//  , assert = require('assert');
+//var url = 'mongodb://localhost:27017/sewage';
 var Agenda = require('agenda');
 var url = 'mongodb://localhost:27017/sewage';
 var agenda = new Agenda({db: {address: url, collection: "jobs"}});
@@ -109,15 +109,15 @@ function saveSerialData(data) {
   a = moment().format("YYYY-MM-DD HH:mm:ss");
   datos = data.split("%");
   documento = { altura: parseInt(datos[0]), hora: a};
-  MongoClient.connect(url, function(err, db) {
-    assert.equal(null, err);
-    //console.log("Connected successfully to server");
-
-    db.collection('lecturas').insertOne(documento, function(err) {
-      assert.equal(null, err);
-      db.close();
-    });
-  });
+  // MongoClient.connect(url, function(err, db) {
+  //   assert.equal(null, err);
+  //   //console.log("Connected successfully to server");
+  //
+  //   db.collection('lecturas').insertOne(documento, function(err) {
+  //     assert.equal(null, err);
+  //     db.close();
+  //   });
+  // });
 }
 
 function notifyPortClose() {
