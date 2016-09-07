@@ -29,7 +29,7 @@ var SerialPort = require('serialport');			// include the serialport library
 // };
 
 // open the serial port:
-var myPort = new SerialPort('/dev/ttyACM0', {
+var myPort = new SerialPort('/dev/tty.usbmodem1411', {
   parser: SerialPort.parsers.readline('\n')
 });
 
@@ -59,10 +59,14 @@ var Agenda = require('agenda');
 var url = 'mongodb://localhost:27017/sewage';
 var agenda = new Agenda({db: {address: url, collection: "jobs"}});
 agenda.define('start agitator', function() {
+  //console.log("Activado agitador");
   myPort.write('700');
+  notifyOpenAgitator();
 });
 agenda.define('shutdown agitator', function() {
+  //console.log("Desactivado agitador");
   myPort.write('799');
+  notifyCloseAgitator();
 });
 agenda.on('ready', function() {
   agenda.start();
@@ -132,6 +136,22 @@ function showError(error) {
        if(error){ }
      });
    }
+}
+
+function notifyOpenAgitator() {
+  mailOptions['subject'] = 'Informando Puesta en marcha del Agitador';
+  mailOptions['text'] = 'Se ha puesto en marcha el Agitador. La hora del evento es: ' + moment().format("HH:mm:ss");
+  transporter.sendMail(mailOptions, function(error, info){
+    if(error){ }
+  });
+}
+
+function notifyCloseAgitator() {
+  mailOptions['subject'] = 'Informando del apagado del Agitador';
+  mailOptions['text'] = 'Se ha apagado el Agitador. La hora del evento es: ' + moment().format("HH:mm:ss");
+  transporter.sendMail(mailOptions, function(error, info){
+    if(error){ }
+  });
 }
 
 

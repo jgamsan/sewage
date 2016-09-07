@@ -56,6 +56,9 @@ var transporter = nodemailer.createTransport({
 var moment = require('moment');
 var tmp = require('tmp');
 XLSX = require('xlsx');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/sewage');
+var Lectura = require('./models/lecturas');
 var altura_maxima = 247;
 var linea_minima = 152;
 var linea_maxima = 192;
@@ -68,51 +71,26 @@ var mailOptions = {
     text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
 
-
-var sqlite3 = require('sqlite3').verbose(),
-db = new sqlite3.Database('sewage');
-
-
 a = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
 b = moment().endOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
 
-var query = "select * FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
-var query_del = "DELETE FROM lecturas WHERE hora BETWEEN '" + a + "' AND '" + b + "';";
-
 var arr = [];
-db.serialize(function() {
-  db.all(query, function(err, rows)
-    {
-    if(err) {
-      throw err;
-    }
-    else
-      {
-        rows.forEach(function (row) {
-          arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
-        })
-        var ws_name = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD").toString();
-        var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
-        wb.SheetNames.push(ws_name);
-        wb.Sheets[ws_name] = ws;
-        tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd)
-          {
-            if (err) throw err;
-            XLSX.writeFile(wb, path);
-            mailOptions['attachments'] = [{path: path}];
-            transporter.sendMail(mailOptions, function(error, info){
-              if(error){ }
-              /*db.run(query_del, function(err, rows) {
-                if(err) {
-                  throw err;
-                }
-                else {
 
-                }
-
-              });*/
-            });
-          })
-    }
-    })
+Lectura.find({ hora: { $gt: a, $lt: b } }, function (err, docs) {
+  docs.forEach(function (row) {
+    arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
+  })
+  var ws_name = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD").toString();
+  var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
+  wb.SheetNames.push(ws_name);
+  wb.Sheets[ws_name] = ws;
+  tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
+    if (err) throw err;
+    XLSX.writeFile(wb, path);
+    mailOptions['attachments'] = [{path: path}];
+    transporter.sendMail(mailOptions, function(error, info) {
+      if(error){ }
+    });
+  })
 });
+process.exit(0);
