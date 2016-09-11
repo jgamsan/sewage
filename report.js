@@ -44,14 +44,14 @@ function Workbook() {
 
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
-    host: 'smtp.mundo-r.com',
-    port: 25,
-    auth: {
-        user: '622500001',
-        pass: 'uha9559/',
-        secure: false,
-        authMethod: 'PLAIN'
-    }
+  host: 'smtp.mundo-r.com',
+  port: 25,
+  auth: {
+      user: '622500001',
+      pass: 'uha9559/',
+      secure: false,
+      authMethod: 'PLAIN'
+  }
 });
 var moment = require('moment');
 var tmp = require('tmp');
@@ -65,21 +65,21 @@ var linea_maxima = 192;
 var linea_critica = 215;
 
 var mailOptions = {
-    from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
-    to: 'uha95@mundo-r.com, jgamsan@et.mde.es, eperlah@et.mde.es', // list of receivers
-    subject: 'Informe Diario Depuradora CMT Parga ✔', // Subject line
-    text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
+  from: '"CMT Parga - depuradora" <no-reply@galiclick.com>', // sender address
+  to: 'uha95@mundo-r.com, jgamsan@et.mde.es, eperlah@et.mde.es', // list of receivers
+  subject: 'Informe Diario Depuradora CMT Parga ✔', // Subject line
+  text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
 
-a = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
-b = moment().endOf('day').subtract(1, 'days').format("YYYY-MM-DD HH:mm:ss");
+a = moment().startOf('day').subtract(1, 'days').format();
+b = moment().endOf('day').subtract(1, 'days').format();
 
 var arr = [];
 
 Lectura.find({ hora: { $gt: a, $lt: b } }, function (err, docs) {
   docs.forEach(function (row) {
     arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
-  })
+  });
   var ws_name = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD").toString();
   var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
   wb.SheetNames.push(ws_name);
@@ -91,6 +91,12 @@ Lectura.find({ hora: { $gt: a, $lt: b } }, function (err, docs) {
     transporter.sendMail(mailOptions, function(error, info) {
       if(error){ }
     });
-  })
+  });
 });
+
+
+Lectura.remove({hora: {$lt: b}}, function(error) {
+  if (error) {}
+});
+
 process.exit(0);
