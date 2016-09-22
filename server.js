@@ -17,7 +17,7 @@ var express = require('express');
 io = require('socket.io'),				// include socket.io
 app = express(),									// make an instance of express.js
 server = app.listen(8080),				// start a server with the express instance
-socketServer = io(server);	 			// make a socket server using the express server
+socketServer = io(server);				// make a socket server using the express server
 
 // serial port initialization:
 var SerialPort = require('serialport');			// include the serialport library
@@ -29,7 +29,7 @@ var SerialPort = require('serialport');			// include the serialport library
 // };
 
 // open the serial port:
-var myPort = new SerialPort('/dev/tty.usbmodem1411', {
+var myPort = new SerialPort('/dev/ttyACM0', {
   parser: SerialPort.parsers.readline('\n')
 });
 
@@ -110,12 +110,11 @@ function showPortOpen() {
 }
 
 function saveSerialData(data) {
-  a = moment().format("YYYY-MM-DD HH:mm:ss");
-  datos = data.split("%");
+  var a = moment().format();
+  var datos = data.split("%");
   var newLectura = Lectura({altura: parseInt(datos[0]), hora: a});
   newLectura.save(function(err) {
     if (err) throw err;
-
     console.log('User created!');
   });
 }
