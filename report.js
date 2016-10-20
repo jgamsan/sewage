@@ -71,14 +71,14 @@ var mailOptions = {
   text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
 
-var a = moment().startOf('day').subtract(1, 'days').toISOString();
-var b = moment().endOf('day').subtract(1, 'days').toISOString();
-console.log(a);
-console.log(b);
+var a = moment().startOf('day').subtract(1, 'days').format();
+var b = moment().endOf('day').subtract(1, 'days').format();
+//console.log(a);
+//console.log(b);
 var arr = [];
 
 Lectura.find({ 'hora': { $gt: a, $lt: b } }, function (err, docs) {
-    console.log(docs.count);
+    //console.log(docs.count);
     docs.forEach(function (row) {
         arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
     });
@@ -91,14 +91,10 @@ Lectura.find({ 'hora': { $gt: a, $lt: b } }, function (err, docs) {
         XLSX.writeFile(wb, path);
         mailOptions['attachments'] = [{path: path}];
         transporter.sendMail(mailOptions, function(error, info) {
-            if(error){ }
+            if(error) { }
         });
     });
 });
 
-
-// Lectura.remove({hora: {$lt: b}}, function(error) {
-//   if (error) {}
-// });
-
+Lectura.find().remove({'hora': { $gt: a, $lt: b }, callback);
 process.exit(0);
