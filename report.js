@@ -78,7 +78,7 @@ var b = moment().endOf('day').subtract(1, 'days').format();
 var arr = [];
 
 Lectura.find({ 'hora': { $gt: a, $lt: b } }, function (err, docs) {
-    //console.log(docs.count);
+
     docs.forEach(function (row) {
         arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
     });
@@ -96,5 +96,10 @@ Lectura.find({ 'hora': { $gt: a, $lt: b } }, function (err, docs) {
     });
 });
 
-Lectura.find().remove({'hora': { $gt: a, $lt: b }, callback);
-process.exit(0);
+Lectura.remove({'hora': { $gt: a, $lt: b }, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      process.exit(0);
+    }
+});

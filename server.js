@@ -32,7 +32,8 @@ var SerialPort = require('serialport');			// include the serialport library
 var myPort = new SerialPort('/dev/ttyACM0', {
   parser: SerialPort.parsers.readline('\n')
 });
-
+var Gpio = require('onoff').Gpio,
+    agi = new Gpio(18, 'out');
 var moment = require('moment');
 
 var nodemailer = require('nodemailer');
@@ -58,14 +59,18 @@ var Lectura = require('./models/lecturas');
 var Agenda = require('agenda');
 var url = 'mongodb://localhost:27017/sewage';
 var agenda = new Agenda({db: {address: url, collection: "jobs"}});
+
+
 agenda.define('start agitator', function() {
   //console.log("Activado agitador");
-  myPort.write('700');
+  //myPort.write('700');
+  agi.writeSync(1);
   notifyOpenAgitator();
 });
 agenda.define('shutdown agitator', function() {
   //console.log("Desactivado agitador");
-  myPort.write('799');
+  //myPort.write('799');
+  agi.writeSync(0);
   notifyCloseAgitator();
 });
 agenda.on('ready', function() {
@@ -102,8 +107,6 @@ function serveFiles(request, response) {
 	var fileName = request.params.name;				// get the file name from the request
 	response.sendFile(fileName, {"root": __dirname});							// send the file
 }
-
-
 
 function showPortOpen() {
    //console.log('port open. Data rate: ' + myPort.options.baudRate);
@@ -171,7 +174,8 @@ function openSocket(socket){
 
 	// this function runs if there's input from the serialport:
 	myPort.on('data', function(data) {
-		socket.emit('message', data);		// send the data to the client
+    var final = data + "%" + agi.readSync().toString();
+    socket.emit('message', final);		// send the data to the client
 	});
 
 	// this function runs if port is closed:
@@ -188,7 +192,7 @@ function openSocket(socket){
     myPort.open(function (err) {
       if (err) {
         //console.log('Error opening port: ', err.message);
-        socket.emit('message', '999%Se ha itentado abrir el Puerto. No fue posible');
+        socket.emit('message', '999%Se ha intentado abrir el Puerto. No fue posible');
       } else {
         //console.log("Puerto Abierto");
         socket.emit('message', '999%Se ha conseguido abrir el puerto');

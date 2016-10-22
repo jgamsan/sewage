@@ -12,6 +12,7 @@
     "mongodb": "^2.2.8",
     "mongoose": "^4.6.0",
     "nodemailer": "2.4.2",
+    "onoff": "^1.1.1",
     "p5": "^0.5.0",
     "rpi-gpio": "^0.7.0",
     "serialport": "^4.0.1",
