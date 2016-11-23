@@ -29,7 +29,7 @@ var SerialPort = require('serialport');			// include the serialport library
 // };
 
 // open the serial port:
-var myPort = new SerialPort('/dev/ttyACM0', {
+var myPort = new SerialPort('/dev/ttyAMA0', {
   parser: SerialPort.parsers.readline('\n')
 });
 var Gpio = require('onoff').Gpio,
@@ -175,6 +175,7 @@ function openSocket(socket){
 	// this function runs if there's input from the serialport:
 	myPort.on('data', function(data) {
     var final = data + "%" + agi.readSync().toString();
+    console.log(final);
     socket.emit('message', final);		// send the data to the client
 	});
 

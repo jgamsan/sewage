@@ -12,7 +12,7 @@
 var socket = io();		      // socket.io instance. Connects back to the server
 var x, height, distAgua, alturaFosa, altura;
 var tempAire;// readings from the server
-var electroA, electroB;
+var electroA, electroB, agitator;
 var code;
 var code_valve;
 var textInfo, alturaText, tempText;
@@ -102,43 +102,51 @@ function draw() {
   line(20, linea_critica, anchoMedidor + 40, linea_critica);
   line(20, linea_minima, anchoMedidor + 40, linea_minima);
   line(20, linea_maxima, anchoMedidor + 40, linea_maxima);
-  fill('red');
-  ellipse(windowWidth * 0.25, windowHeight * 0.58, radioValvulas, radioValvulas);
   //rect(windowWidth * 0.42, windowHeight * 0.10, windowWidth * 0.1, windowHeight * 0.59, 5, 5, 0, 0);
 
   //ellipse(windowWidth * 0.22, windowHeight * 0.62, radioArquetas, radioArquetas);
   //ellipse(windowWidth * 0.29, windowHeight * 0.50, radioArquetas, radioArquetas);
   switch(electroA) {
       case 0:
-          fill('red');
-          ellipse(windowWidth * 0.25, windowHeight * 0.74, radioValvulas, radioValvulas);
+        fill('red');
+        ellipse(windowWidth * 0.25, windowHeight * 0.74, radioValvulas, radioValvulas);
           //ellipse(windowWidth * 0.15, windowHeight * 0.74, radioArquetas, radioArquetas);
         break;
       case 1:
-          fill('blue');
-          ellipse(windowWidth * 0.25, windowHeight * 0.74, radioValvulas, radioValvulas);
+        fill('blue');
+        ellipse(windowWidth * 0.25, windowHeight * 0.74, radioValvulas, radioValvulas);
           //ellipse(windowWidth * 0.15, windowHeight * 0.74, radioArquetas, radioArquetas);
-          break;
+        break;
   }
   switch(electroB) {
       case 0:
-          fill("red");
-          ellipse(windowWidth * 0.25, windowHeight * 0.66, radioValvulas, radioValvulas);
+        fill("red");
+        ellipse(windowWidth * 0.25, windowHeight * 0.66, radioValvulas, radioValvulas);
           //rect(windowWidth * 0.65, windowHeight * 0.25, radioArquetas, radioArquetas, 20);
-          buttonOpen.show();
-          buttonClose.show();
-          break;
+        buttonOpen.show();
+        buttonClose.show();
+        break;
       case 1:
-          fill("blue");
-          ellipse(windowWidth * 0.25, windowHeight * 0.66, radioValvulas, radioValvulas);
+        fill("blue");
+        ellipse(windowWidth * 0.25, windowHeight * 0.66, radioValvulas, radioValvulas);
           //rect(windowWidth * 0.65, windowHeight * 0.25, radioArquetas, radioArquetas, 20);
-          buttonOpen.hide();
-          if (code_valve=="555") {
-            buttonClose.show();
-          } else {
-            buttonClose.hide();
-          }
-          break;
+        buttonOpen.hide();
+        if (code_valve=="555") {
+          buttonClose.show();
+        } else {
+          buttonClose.hide();
+        }
+        break;
+  }
+  switch (agitator) {
+    case 0:
+      fill('red');
+      ellipse(windowWidth * 0.25, windowHeight * 0.58, radioValvulas, radioValvulas);
+      break;
+    case 1:
+      fill('blue');
+      ellipse(windowWidth * 0.25, windowHeight * 0.58, radioValvulas, radioValvulas);
+      break;
   }
 
 }
@@ -161,6 +169,7 @@ function readData(data) {
       code = 0;
       electroA = parseInt(datos[2]);
       electroB = parseInt(datos[3]);
+      agitator = parseInt(datos[4]);
     }
 
 }
