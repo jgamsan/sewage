@@ -57,7 +57,7 @@ var moment = require('moment');
 var tmp = require('tmp');
 XLSX = require('xlsx');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/sewage');
+mongoose.connect('mongodb://192.168.1.109:27017/sewage');
 var Lectura = require('./models/lecturas');
 var altura_maxima = 247;
 var linea_minima = 152;
@@ -71,32 +71,35 @@ var mailOptions = {
   text: 'Informe Lecturas de la Depuradra CMT Parga correspondiente al dia ' + moment().subtract(1, 'days').format("DD-MM-YYYY"), // plaintext body
 };
 
-a = moment().startOf('day').subtract(1, 'days').format();
-b = moment().endOf('day').subtract(1, 'days').format();
-
+var a = moment().startOf('day').subtract(1, 'days').format();
+var b = moment().endOf('day').subtract(1, 'days').format();
+//console.log(a);
+//console.log(b);
 var arr = [];
 
-Lectura.find({ hora: { $gt: a, $lt: b } }, function (err, docs) {
-  docs.forEach(function (row) {
-    arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
-  });
-  var ws_name = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD").toString();
-  var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
-  wb.SheetNames.push(ws_name);
-  wb.Sheets[ws_name] = ws;
-  tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
-    if (err) throw err;
-    XLSX.writeFile(wb, path);
-    mailOptions['attachments'] = [{path: path}];
-    transporter.sendMail(mailOptions, function(error, info) {
-      if(error){ }
+Lectura.find({ 'hora': { $gt: a, $lt: b } }, function (err, docs) {
+
+    docs.forEach(function (row) {
+        arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
     });
-  });
+    var ws_name = moment().startOf('day').subtract(1, 'days').format("YYYY-MM-DD").toString();
+    var wb = new Workbook(), ws = sheet_from_array_of_arrays(arr);
+    wb.SheetNames.push(ws_name);
+    wb.Sheets[ws_name] = ws;
+    tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
+        if (err) throw err;
+        XLSX.writeFile(wb, path);
+        mailOptions['attachments'] = [{path: path}];
+        transporter.sendMail(mailOptions, function(error, info) {
+            if(error) { }
+        });
+    });
 });
 
-
-Lectura.remove({hora: {$lt: b}}, function(error) {
-  if (error) {}
+Lectura.remove({'hora': { $gt: a, $lt: b }, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      process.exit(0);
+    }
 });
-
-process.exit(0);
