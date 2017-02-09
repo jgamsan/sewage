@@ -13,6 +13,7 @@ by Tom Igoe
 
 // server initialization:
 var express = require('express');
+var term = require( 'terminal-kit' ).terminal ;
 
 io = require('socket.io'),				// include socket.io
 app = express(),									// make an instance of express.js
@@ -95,8 +96,6 @@ myPort.on('open', showPortOpen);
 myPort.on('data', saveSerialData);
 myPort.on('close', notifyPortClose);
 myPort.on('error', showError);
-
-
 
 function serveFiles(request, response) {
 	var fileName = request.params.name;				// get the file name from the request
