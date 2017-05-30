@@ -56,9 +56,9 @@ var transporter = nodemailer.createTransport({
 var moment = require('moment');
 var tmp = require('tmp');
 XLSX = require('xlsx');
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://192.168.1.109:27017/sewage');
-var Lectura = require('./models/lecturas');
+var MongoClient = require('mongodb').MongoClient
+ , assert = require('assert');
+var url = 'mongodb://localhost:27017/sewage';
 var altura_maxima = 247;
 var linea_minima = 152;
 var linea_maxima = 192;
@@ -77,8 +77,16 @@ var b = moment().endOf('day').subtract(1, 'days').format();
 //console.log(b);
 var arr = [];
 
-Lectura.find({ 'hora': { $gt: a, $lt: b } }, function (err, docs) {
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  console.log("Connected correctly to server");
 
+  var col = db.collection('lecturas');
+  // Insert a single document
+  col.find({'hora': { $gt: a, $lt: b }}).toArray(function(err, docs) {
+    assert.equal(err, null);
+    console.log("Found the following records");
+    console.log(docs);
     docs.forEach(function (row) {
         arr.push([moment(row.hora).format("HH:mm:ss"), altura_maxima - row.altura, linea_minima, linea_maxima, linea_critica]);
     });
@@ -87,19 +95,19 @@ Lectura.find({ 'hora': { $gt: a, $lt: b } }, function (err, docs) {
     wb.SheetNames.push(ws_name);
     wb.Sheets[ws_name] = ws;
     tmp.file({ mode: 0644, prefix: 'depuradora-', postfix: '.xlsx' }, function _tempFileCreated(err, path, fd) {
-        if (err) throw err;
-        XLSX.writeFile(wb, path);
-        mailOptions['attachments'] = [{path: path}];
-        transporter.sendMail(mailOptions, function(error, info) {
-            if(error) { }
-        });
+      if (err) throw err;
+      XLSX.writeFile(wb, path);
+      mailOptions['attachments'] = [{path: path}];
+      transporter.sendMail(mailOptions, function(error, info) {
+        if(error) { }
+      });
     });
-});
+  });
 
-Lectura.remove({'hora': { $gt: a, $lt: b }, function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      process.exit(0);
-    }
+    // Remove a single document
+  col.deleteMany({'hora': { $gt: a, $lt: b}}, function(err, r) {
+    assert.equal(null, err);
+    assert.equal(2, r.deletedCount);
+    db.close();
+  });
 });
